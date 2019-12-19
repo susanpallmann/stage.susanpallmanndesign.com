@@ -643,14 +643,14 @@ p#footer-title {
   color: #fff;
 }
 .column.hybrid-row .column.project:nth-child(3n+1) {
-  margin-right: 0.66em;
+  padding-right: 0.66em;
 }
 .column.hybrid-row .column.project:nth-child(3n+2) {
-  margin-right: 0.33em;
-  margin-left: 0.33em;
+  padding-right: 0.33em;
+  padding-left: 0.33em;
 }
 .column.hybrid-row .column.project:nth-child(3n+3) {
-  margin-left: 0.66em;
+  padding-left: 0.66em;
 }
 
 /* Media Queries (Mobile First) */
