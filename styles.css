@@ -421,6 +421,7 @@ h5 {
   color: #FF6666;
   margin: 0;
   margin-bottom: 1em;
+  font-weight: 300;
 }
 main p {
   color: #666;
@@ -627,16 +628,15 @@ p#footer-title {
   width: 100%;
   margin: 0;
 }
-/*Homepage Hero*/
-/*Portfolio Grid*/
-.portfolio-box {
-  width: 100%;
-  padding-top: 75%;
-  background-color: #f7f7f7;
+/* Portfolio Grid */
+.project {
+  background-color: #eee;
 }
-#portfolio .column {
-  padding: 0px 20px 0px 0px;
-  box-sizing: border-box;
+.project h4 {
+  color: #fff;
+}
+.project h5 {
+  color: #fff;
 }
 /* Media Queries (Mobile First) */
 /* Very Small Screens */
