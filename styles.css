@@ -647,6 +647,7 @@ main .portfolio.column {
 }
 .project h4 {
   color: #fff;
+  margin: 0;
 }
 .project h5 {
   color: #fff;
