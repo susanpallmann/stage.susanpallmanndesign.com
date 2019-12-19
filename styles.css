@@ -494,6 +494,7 @@ span.tag:hover {
 /* Buttons */
 .button-container {
   text-align: center;
+  width: 100%;
 }
 .button {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
