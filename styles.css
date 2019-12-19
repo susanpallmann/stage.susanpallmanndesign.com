@@ -649,6 +649,7 @@ main .portfolio.column {
   padding-bottom: 75% !important;
   margin-bottom: 1em;
   position: relative;
+  background-image: url("");
   background-size: cover;
   background-position: center;
 }
