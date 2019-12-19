@@ -661,7 +661,7 @@ main .portfolio.column {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255,102,102,0.5);
+  background-color: rgba(255,102,102,0.75);
   opacity: 0;
   transition-property: opacity;
   transition-duration: .2s;
