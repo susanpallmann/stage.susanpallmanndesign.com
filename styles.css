@@ -596,7 +596,7 @@ p#footer-title {
   margin: 0;
 }
 /*Homepage Hero*/
-#gradient {
+#hero.gradient {
   background-color: #FF6666;
   height: 100%;
   width: 100%;
