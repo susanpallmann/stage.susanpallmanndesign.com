@@ -457,7 +457,7 @@ a:hover {
   margin-right: 6em;
 }
 .horizontal#project-meta li {
-  display: inline;
+  display: block;
 }
 #project-meta p {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
