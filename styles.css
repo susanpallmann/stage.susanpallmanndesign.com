@@ -13,7 +13,7 @@
 .bigger-picture#hero #dramatic-headline {
   color: #52837A;
 }
-.project .bigger-picture {
+.column.hybrid-row .column.project .column.bigger-picture {
   background-color: #6B9287;
   background-image: url("images/bigger-picture/thumbnail.png");
 }
