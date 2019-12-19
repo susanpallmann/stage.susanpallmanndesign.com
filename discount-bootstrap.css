@@ -120,6 +120,42 @@
 }
 /* Major Breakpoint || Tablets & Small Desktops */
 @media only screen and (min-width: 721px) {
+  .column.span1.md2 {
+    width: 8.33%;
+  }
+  .column.span2.md2 {
+    width: 16.66%;
+  }
+  .column.span3.md2 {
+    width: 25%;
+  }
+  .column.span4.md2 {
+    width: 33.33%
+  }
+  .column.span5.md2 {
+    width: 41.66%
+  }
+  .column.span6.md2 {
+    width: 50%;
+  }
+  .column.span7.md2 {
+    width: 58.34%;
+  }
+  .column.span8.md2 {
+    width: 66.67%;
+  }
+  .column.span9.md2 {
+    width: 75%;
+  }
+  .column.span10.md2 {
+    width: 83.34%;
+  }
+  .column.span11.md2 {
+    width: 91.67%;
+  }
+  .column.span12.md2 {
+    width: 100%;
+  }
 }
 /* Major Breakpoint || Desktop & Up */
 @media only screen and (min-width: 1024px) {
