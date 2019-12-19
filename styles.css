@@ -649,6 +649,8 @@ main .portfolio.column {
   padding-bottom: 75% !important;
   margin-bottom: 1em;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 .overlay {
   height: 100%;
