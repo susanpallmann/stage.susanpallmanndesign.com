@@ -664,10 +664,12 @@ main .portfolio.column {
 .project h4 {
   color: #fff;
   margin: 0;
+  font-size: 1.4em;
 }
 .project h5 {
   color: #fff;
   margin: 0;
+  font-size: 1.4em;
 }
 /* Media Queries (Mobile First) */
 /* Very Small Screens */
