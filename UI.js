@@ -4,6 +4,36 @@ $(document).ready(function() {
   heroParallax();
   pattern = 1;
   
+  /* Adjust these global variables */
+  // Speed of hamburger animation (milliseconds). Should match CSS animation speed.
+  hamburgerAnimSpeed = 400;
+  /* End adjustable variables */
+
+  /* Do not adjust these global variables */
+  scrollValue = -100;
+  screenWidth = screen.width;
+  /* End global variables */
+
+  $("#top_hamburger").click(function() {
+    if ($(this).hasClass("animcomplete")) {
+      $(this).removeClass("animcomplete");
+      $(this).addClass("closed");
+      $("#dropdown").slideToggle( "fast" );
+      $('#dropdown').find('.expandable').addClass('collapsed');
+      setTimeout(function() {
+        $("#top_hamburger").removeClass("closed");
+      }, hamburgerAnimSpeed);
+    } else {
+      $(this).addClass("open");
+      $('#dropdown').find('.expandable').removeClass('collapsed');
+      $("#dropdown").slideToggle( "fast" );
+      setTimeout(function() {
+        $("#top_hamburger").removeClass("open");
+        $("#top_hamburger").addClass("animcomplete");
+      }, hamburgerAnimSpeed);
+    }
+  });
+  
   $("#mark").click(function() {
     if (location.pathname == "/") {
       scrollToTop();
@@ -74,35 +104,6 @@ $(document).ready(function() {
 });
 
 window.onload = function() {
-  /* Adjust these global variables */
-  // Speed of hamburger animation (milliseconds). Should match CSS animation speed.
-  hamburgerAnimSpeed = 400;
-  /* End adjustable variables */
-
-  /* Do not adjust these global variables */
-  scrollValue = -100;
-  screenWidth = screen.width;
-  /* End global variables */
-
-  $("#top_hamburger").click(function() {
-    if ($(this).hasClass("animcomplete")) {
-      $(this).removeClass("animcomplete");
-      $(this).addClass("closed");
-      $("#dropdown").slideToggle( "fast" );
-      $('#dropdown').find('.expandable').addClass('collapsed');
-      setTimeout(function() {
-        $("#top_hamburger").removeClass("closed");
-      }, hamburgerAnimSpeed);
-    } else {
-      $(this).addClass("open");
-      $('#dropdown').find('.expandable').removeClass('collapsed');
-      $("#dropdown").slideToggle( "fast" );
-      setTimeout(function() {
-        $("#top_hamburger").removeClass("open");
-        $("#top_hamburger").addClass("animcomplete");
-      }, hamburgerAnimSpeed);
-    }
-  });
 };
 //Returns the position user is scrolled to when called. Ensure this function is called when user has finished scrolling.
 function getScrollPosition() {
@@ -133,7 +134,6 @@ function heroParallax() {
   var scrollPosition = getScrollPosition();
   var bottomScrollPosition = scrollPosition + globalViewportHeight;
   var bottomOffset = bottomScrollPosition - heroBottom;
-  console.log(scrollPosition + bottomScrollPosition + bottomOffset);
   if (bottomOffset < 0) {
     bottomOffset = 0;
   }
@@ -143,7 +143,6 @@ function heroParallax() {
     if ( heroBottom > scrollPosition) {
       if ( heroBottom < bottomScrollPosition) {
         var percentScrolled = 1 - (((heroBottom + bottomOffset) - scrollPosition)/globalViewportHeight);
-        console.log(percentScrolled);
         $('img.parallax').css('transform','translateY(-' + imageModifier*percentScrolled + 'px)');
         $('#dramatic-headline').css('transform','translateY(-' + headlineModifier*percentScrolled + 'px)');
       }
@@ -155,15 +154,11 @@ function heroParallax() {
 $(window).scroll(function() {
   clearTimeout($.data(this, 'scrollTimer'));
   $.data(this, 'scrollTimer', setTimeout(function() {
-    console.log("USER STOPPED SCROLLING");
     var scrollPosition = getScrollPosition();
     var pageHeight =  getPageHeight();
     var viewportHeight = getViewportHeight();
-    console.log("called function variables correctly and they are" + scrollPosition + " " + pageHeight + " " + viewportHeight);
     var newScrollMax = pageHeight - viewportHeight;
-    console.log(newScrollMax);
     var pageScrollPercentage = scrollPosition/newScrollMax;
-    console.log(pageScrollPercentage);
     if (pageScrollPercentage > 0) {
     $("#false-after").css("transform", "scaleX(" + pageScrollPercentage + ")" );
     $("#false-after").css("height", "4px");
@@ -171,7 +166,6 @@ $(window).scroll(function() {
     $("#false-after").css("transform", "scaleX(" + pageScrollPercentage + ")" );
     $("#false-after").css("height", "0px");
     }
-    console.log("End function");
     //Scroll timer value
-  }, 20));
+  }, 100));
 });
