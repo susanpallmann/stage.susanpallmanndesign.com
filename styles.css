@@ -629,7 +629,7 @@ p#footer-title {
   margin: 0;
 }
 /* Portfolio Grid */
-.project {
+.column.hybrid-row .column.project {
   padding: 1em;
 }
 .project .column {
