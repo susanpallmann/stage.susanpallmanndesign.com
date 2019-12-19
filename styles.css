@@ -244,6 +244,7 @@ nav#vertical ul {
   margin: 0;
   padding: 1em;
   display: inline-block;
+  width: auto;
 }
 nav#vertical li {
   margin-bottom: 1.5em;
@@ -257,6 +258,9 @@ nav#vertical li a {
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
+/*nav#vertical .expandable {
+  width: auto;
+}*/
 /* Horzontal Navigation */
 nav#horizontal {
   display: none;
