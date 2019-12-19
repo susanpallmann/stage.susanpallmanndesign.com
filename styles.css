@@ -642,16 +642,6 @@ p#footer-title {
 .project h5 {
   color: #fff;
 }
-.column.hybrid-row .column.project:nth-child(3n+1) {
-  padding: 0 0.66em 0 0 !important;
-}
-.column.hybrid-row .column.project:nth-child(3n+2) {
-  padding: 0 0.33em 0 0.33em !important;
-}
-.column.hybrid-row .column.project:nth-child(3n+3) {
-  padding: 0 0 0 0.66em !important;
-}
-
 /* Media Queries (Mobile First) */
 /* Very Small Screens */
 @media only screen and (max-width: 320px) {
@@ -739,6 +729,15 @@ p#footer-title {
   }
   #hero .container {
     margin-top: 100px;
+  }
+  .column.hybrid-row .column.project:nth-child(3n+1) {
+    padding: 0 0.66em 0 0 !important;
+  }
+  .column.hybrid-row .column.project:nth-child(3n+2) {
+    padding: 0 0.33em 0 0.33em !important;
+  }
+  .column.hybrid-row .column.project:nth-child(3n+3) {
+    padding: 0 0 0 0.66em !important;
   }
   .footer-list.to100, .footer-list.to50, .footer-list.to33 {
     padding-right: 4em;
