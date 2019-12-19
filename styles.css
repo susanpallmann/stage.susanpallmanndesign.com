@@ -655,13 +655,16 @@ main .portfolio.column {
   left: 0;
   right: 0;
   background-color: rgba(255,102,102,0.5);
-  opacity: 1;
+  opacity: 0;
   transition-property: opacity;
   transition-duration: .2s;
   transition-timing-function: linear;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: .2s;
   -webkit-transition-timing-function: linear; 
+}
+.overlay:hover {
+  opacity: 1;
 }
 main .centered {
   top: 50%;
