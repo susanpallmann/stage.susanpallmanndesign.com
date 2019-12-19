@@ -649,6 +649,7 @@ main .portfolio.column {
 }
 .project h5 {
   color: #fff;
+  margin: 0;
 }
 /* Media Queries (Mobile First) */
 /* Very Small Screens */
