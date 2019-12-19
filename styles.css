@@ -655,6 +655,12 @@ main .portfolio.column {
   left: 0;
   right: 0;
 }
+.centered {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .project h4 {
   color: #fff;
   margin: 0;
