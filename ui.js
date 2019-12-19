@@ -124,6 +124,8 @@ function getViewportHeight() {
 }
 
 function heroParallax() {
+  if ( $('#hero').hasClass('gradient') ) {
+  } else {
   var hero = $('#hero');
   var heroOffset = hero.offset();
   var heroTop = heroOffset.top;
