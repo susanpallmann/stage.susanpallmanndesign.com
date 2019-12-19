@@ -44,6 +44,7 @@ img::-moz-selection {
 }
 .gradient#hero #dramatic-headline {
   color: #ff6666;
+  opacity: 0.1;
 }
 .bigger-picture#hero {
   background-color: #6B9287;
