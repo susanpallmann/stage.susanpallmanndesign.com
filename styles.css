@@ -639,7 +639,7 @@ main .portfolio.column {
 }
 .column.hybrid-row .column.project {
 }
-.project.column.hybrid-row .column {
+.column.hybrid-row .column.project .column {
   background-color: #eee;
   text-align: center;
   padding: 1em !important;
