@@ -630,6 +630,8 @@ p#footer-title {
 /* Media Queries (Mobile First) */
 /* Very Small Screens */
 @media only screen and (max-width: 320px) {
+  #hero .container {
+  }
   .footer-list {
     padding-right: 2em;
     margin: 2em 0 2em 0;
@@ -650,6 +652,8 @@ p#footer-title {
   #hero {
     height: 400px;
   }
+  #hero .container {
+  }
   .footer-list {
     padding-right: 2em;
     margin: 2em 0 2em 0;
@@ -669,6 +673,9 @@ p#footer-title {
 @media only screen and (min-width: 601px) {
   #hero {
     height: 600px;
+  }
+  #hero .container {
+    margin-top: 100px;
   }
   .footer-list {
     padding-right: 3em;
@@ -704,6 +711,9 @@ p#footer-title {
   }
   #hero {
     height: 600px;
+  }
+  #hero .container {
+    margin-top: 100px;
   }
   .footer-list.to100, .footer-list.to50, .footer-list.to33 {
     padding-right: 4em;
