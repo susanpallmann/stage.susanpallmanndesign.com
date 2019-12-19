@@ -634,6 +634,9 @@ p#footer-title {
   margin: 0;
 }
 /* Portfolio Grid */
+main .portfolio.column {
+  margin-top: 0;
+}
 .column.hybrid-row .column.project {
 }
 .project .column {
