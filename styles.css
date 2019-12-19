@@ -723,6 +723,9 @@ main .centered {
   #hero .container {
     margin-top: 100px;
   }
+  main .centered {
+    font-size: 1.5em;
+  }
   .footer-list {
     padding-right: 3em;
     margin: 2em 0 2em 0;
@@ -769,6 +772,9 @@ main .centered {
   }
   .column.hybrid-row .span4.project:nth-child(3n+3) {
     padding: 0 0 0 0.66em !important;
+  }
+  main .centered {
+    font-size: 1em;
   }
   .footer-list.to100, .footer-list.to50, .footer-list.to33 {
     padding-right: 4em;
