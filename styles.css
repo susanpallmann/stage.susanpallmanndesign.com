@@ -1,3 +1,22 @@
+/* Project-Specific Styles */
+.gradient#hero {
+  background-color: #FF6666;
+  background-image: linear-gradient(180deg, #FF6666, #DCA1C4);
+}
+.gradient#hero #dramatic-headline {
+  color: #ff6666;
+  opacity: 0.1;
+}
+.bigger-picture#hero {
+  background-color: #6B9287;
+}
+.bigger-picture#hero #dramatic-headline {
+  color: #52837A;
+}
+.project .bigger-picture {
+  background-color: #6B9287;
+  background-image: url("images/bigger-picture/thumbnail.png");
+}
 /* Selection Styles */
 ::selection {
   background: #FF6666;
@@ -37,21 +56,6 @@ img::-moz-selection {
   background-color: #FAFAFA;
   display: inline-block;
   width: 100%;
-}
-/* Hero Colors by Project */
-.gradient#hero {
-  background-color: #FF6666;
-  background-image: linear-gradient(180deg, #FF6666, #DCA1C4);
-}
-.gradient#hero #dramatic-headline {
-  color: #ff6666;
-  opacity: 0.1;
-}
-.bigger-picture#hero {
-  background-color: #6B9287;
-}
-.bigger-picture#hero #dramatic-headline {
-  color: #52837A;
 }
 /* Header Styles */
 header {
