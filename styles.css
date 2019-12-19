@@ -374,6 +374,9 @@ nav#horizontal li:after {
   width: 100%;
   margin: 0 auto;
 }
+#hero .container {
+  position: relative;
+ }
 #hero h1 {
   color: #ffffff;
 }
