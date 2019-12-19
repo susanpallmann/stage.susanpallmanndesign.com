@@ -630,7 +630,11 @@ p#footer-title {
 }
 /* Portfolio Grid */
 .project {
+}
+.project .column {
+  padding: 1em;
   background-color: #eee;
+  text-align: center;
 }
 .project h4 {
   color: #fff;
