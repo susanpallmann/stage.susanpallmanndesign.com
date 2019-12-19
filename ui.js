@@ -125,6 +125,12 @@ function getViewportHeight() {
 
 function heroParallax() {
   if ( $('#hero').hasClass('gradient') ) {
+    $("#hero").mousemove(function( event ) {
+      var w = $(this).width(),
+        pct = 360*(+event.pageX)/w,
+        bg = "linear-gradient(" + pct + "deg,#FF6666,#DCA1C4)";
+      $("#hero").css('background-image', bg);
+    });
   } else {
     var hero = $('#hero');
     var heroOffset = hero.offset();
@@ -152,14 +158,6 @@ function heroParallax() {
     });
   }
 }
-
-$("#hero.gradient").mousemove(function( event ) {
-  var w = $(this).width(),
-      pct = 360*(+event.pageX)/w,
-      bg = "linear-gradient(" + pct + "deg,#FF6666,#DCA1C4)";
-      $("#hero").css("background-image", bg);
-});
-
 
 //Listen for when the user scrolls and then finishes scrolling (that is, stopped scrolling for 250 milliseconds)
 $(window).scroll(function() {
