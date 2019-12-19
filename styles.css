@@ -642,6 +642,7 @@ main .portfolio.column {
 .project .column {
   background-color: #eee;
   text-align: center;
+  padding: 1em !important;
 }
 .project h4 {
   color: #fff;
