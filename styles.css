@@ -642,7 +642,7 @@ main .portfolio.column {
 .column.hybrid-row .column.project .column {
   background-color: #eee;
   text-align: center;
-  padding: 1em !important;
+  padding: 25% !important;
   margin-bottom: 1em;
 }
 .project h4 {
