@@ -1,0 +1,1 @@
+Images for the website are hosted here, with individual projects getting their own dedicated folders (due to frequency of similar names). Images for important pages like the Homepage and About can be stored in the master Images directory.
