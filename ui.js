@@ -150,7 +150,7 @@ function heroParallax() {
   });
 }
 
-$(".gradient#hero").mousemove(function( event ) {
+$(".gradient #hero").mousemove(function( event ) {
   var w = $(this).width(),
       pct = 360*(+event.pageX)/w,
       bg = "linear-gradient(" + pct + "deg,#FF6666,#DCA1C4)";
