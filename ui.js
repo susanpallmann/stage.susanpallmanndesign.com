@@ -160,21 +160,25 @@ $(".gradient #hero").mousemove(function( event ) {
 
 //Listen for when the user scrolls and then finishes scrolling (that is, stopped scrolling for 250 milliseconds)
 $(window).scroll(function() {
-  clearTimeout($.data(this, 'scrollTimer'));
-  $.data(this, 'scrollTimer', setTimeout(function() {
-    var scrollPosition = getScrollPosition();
-    var pageHeight =  getPageHeight();
-    var viewportHeight = getViewportHeight();
-    var newScrollMax = pageHeight - viewportHeight;
-    var pageScrollPercentage = scrollPosition/newScrollMax;
-    if (pageScrollPercentage > 0) {
-    $("#false-after").css("transform", "scaleX(" + pageScrollPercentage + ")" );
-    $("#false-after").css("height", "4px");
-    } else {
-    $("#false-after").css("transform", "scaleX(" + pageScrollPercentage + ")" );
-    $("#false-after").css("height", "0px");
-    }
-    //Scroll timer value
-  }, 100));
+  if ( $("#false-after").length ) {
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function() {
+      var scrollPosition = getScrollPosition();
+      var pageHeight =  getPageHeight();
+      var viewportHeight = getViewportHeight();
+      var newScrollMax = pageHeight - viewportHeight;
+      var pageScrollPercentage = scrollPosition/newScrollMax;
+      if (pageScrollPercentage > 0) {
+        $("#false-after").css("transform", "scaleX(" + pageScrollPercentage + ")" );
+        $("#false-after").css("height", "4px");
+      } else {
+        $("#false-after").css("transform", "scaleX(" + pageScrollPercentage + ")" );
+        $("#false-after").css("height", "0px");
+      }
+      //Scroll timer value
+    }, 100));
+  } else {
+    console.log("not running anything :)");
+  }
 });
 /* Please say editing it magically fixed the problem */
