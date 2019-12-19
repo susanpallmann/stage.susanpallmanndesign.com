@@ -3,7 +3,7 @@ $(document).ready(function() {
   globalPageHeight = getPageHeight();
   heroParallax();
   pattern = 1;
-  
+
   /* Adjust these global variables */
   // Speed of hamburger animation (milliseconds). Should match CSS animation speed.
   hamburgerAnimSpeed = 400;
@@ -169,3 +169,4 @@ $(window).scroll(function() {
     //Scroll timer value
   }, 100));
 });
+/* Please say editing it magically fixed the problem */
