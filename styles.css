@@ -37,6 +37,20 @@ img::-moz-selection {
   display: inline-block;
   width: 100%;
 }
+/* Hero Colors by Project */
+.gradient#hero {
+  background-color: #FF6666;
+  background-image: linear-gradient(180deg, #FF6666, #DCA1C4);
+}
+.gradient#hero #dramatic-headline {
+  color: #ff6666;
+}
+.bigger-picture#hero {
+  background-color: #6B9287;
+}
+.bigger-picture#hero #dramatic-headline {
+  color: #52837A;
+}
 /* Header Styles */
 header {
   position: absolute;
@@ -304,7 +318,7 @@ nav#horizontal li:after {
 }
 /* Hero Header */
 #hero {
-  background-color: #6B9287;
+  background-color: #eee;
   height: 400px;
   overflow: hidden;
   padding-top: 100px;
@@ -323,7 +337,7 @@ nav#horizontal li:after {
   position: absolute;
 }
 #hero #dramatic-headline {
-  color: #52837A;
+  color: #ddd;
   font-size: 20em;
   font-weight: 800;
   position: relative;
@@ -596,12 +610,6 @@ p#footer-title {
   margin: 0;
 }
 /*Homepage Hero*/
-#hero.gradient {
-  background-color: #FF6666;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(180deg, #FF6666, #DCA1C4);
-}
 /*Portfolio Grid*/
 .portfolio-box {
   width: 100%;
