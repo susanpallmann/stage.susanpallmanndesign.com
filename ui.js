@@ -92,12 +92,12 @@ $(document).ready(function() {
     if (button.attr('aria-checked') === 'true') {
       //Uncheck it, update the icon, expand text
       button.attr('aria-checked','false');
-      button.html("Read More");
+      button.html("View More");
       container.find('.expandable').addClass('collapsed');
     } else {
       //If it is not checked, check it, update the icon, collapse text
       button.attr('aria-checked','true');
-      button.html("Read Less");
+      button.html("View Less");
       container.find('.expandable').removeClass('collapsed');
     }
   });
