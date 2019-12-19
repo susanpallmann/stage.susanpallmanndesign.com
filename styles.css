@@ -449,6 +449,13 @@ a:hover {
 #project-meta li {
   display: inline-block;
 }
+#project-meta.horizontal ul {
+  display: inline-block;
+  margin-right: 6em;
+}
+#project-meta.horizontal li {
+  display: inline;
+}
 #project-meta p {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 300;
