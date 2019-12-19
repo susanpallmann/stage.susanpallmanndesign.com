@@ -658,8 +658,10 @@ main .portfolio.column {
 main .centered {
   top: 50%;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
 }
 .project h4 {
   color: #fff;
