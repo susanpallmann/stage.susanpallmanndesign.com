@@ -642,8 +642,18 @@ main .portfolio.column {
 .column.hybrid-row .column.project .column {
   background-color: #eee;
   text-align: center;
-  padding: 25% !important;
+  padding-bottom: 75% !important;
   margin-bottom: 1em;
+  position: relative;
+}
+.overlay {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .project h4 {
   color: #fff;
