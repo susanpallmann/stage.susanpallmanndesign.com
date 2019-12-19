@@ -452,11 +452,11 @@ a:hover {
 #project-meta li {
   display: inline-block;
 }
-#project-meta.horizontal ul {
+.horizontal#project-meta ul {
   display: inline-block;
   margin-right: 6em;
 }
-#project-meta.horizontal li {
+.horizontal#project-meta li {
   display: inline;
 }
 #project-meta p {
