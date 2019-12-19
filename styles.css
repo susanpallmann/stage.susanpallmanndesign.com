@@ -655,7 +655,7 @@ main .portfolio.column {
   left: 0;
   right: 0;
 }
-.centered {
+main .centered {
   top: 50%;
   position: absolute;
   left: 50%;
