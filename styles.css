@@ -724,6 +724,9 @@ select#portfolio-filter:focus option:hover {
   background-color: #cccccc;
   color: #ffffff;
 }
+select#portfolio-filter::-ms-expand {
+	display: none;
+}
 /* Portfolio Grid */
 main .portfolio.column {
   margin-top: 0;
