@@ -38,7 +38,7 @@ $(document).ready(function() {
     if (location.pathname == "/") {
       scrollToTop();
     } else {
-      redirect("/");
+      window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
     }
   });
   $('header .sp-icon').mouseleave(function() {
