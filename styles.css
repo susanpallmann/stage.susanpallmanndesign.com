@@ -17,6 +17,10 @@
   background-color: #6B9287;
   background-image: url("images/bigger-picture/thumbnail.png");
 }
+.column.hybrid-row .column.project .column.everyday {
+  background-color: #6B9287;
+  background-image: url("images/everyday/thumbnail.png");
+}
 /* Selection Styles */
 ::selection {
   background: #FF6666;
