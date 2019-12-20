@@ -714,10 +714,10 @@ select#portfolio-filter {
   -webkit-appearance: none;
   appearance: none;
 }
-select#portfolio-filter:focus {
-	background-color: #cccccc;
+select#portfolio-filter:hover {
+  background-color: #cccccc;
   color: #ffffff;
-	outline: none;
+  outline: none;
 }
 /* Portfolio Grid */
 main .portfolio.column {
