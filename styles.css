@@ -709,6 +709,7 @@ select#portfolio-filter {
   -webkit-transition-duration: .2s;
   -webkit-transition-timing-function: linear;
   cursor: pointer;
+  outline: none;
 }
 /* Portfolio Grid */
 main .portfolio.column {
