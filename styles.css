@@ -692,6 +692,7 @@ h3.grid-title {
   margin-top: 0.5em;
 }
 select#portfolio-filter {
+  font-family: 'open sans', sans-serif;
   border: none;
   padding: 0.3em 0.6em;
   background-color: #E6E6E6;
