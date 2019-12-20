@@ -716,6 +716,7 @@ select#portfolio-filter {
 }
 select#portfolio-filter:focus {
   outline: none;
+  border: none;
   border-radius: 50px;
 }
 select#portfolio-filter:focus option {
@@ -725,7 +726,7 @@ select#portfolio-filter:focus option:hover {
   color: #ffffff;
 }
 select#portfolio-filter::-ms-expand {
-	display: none;
+  display: none;
 }
 /* Portfolio Grid */
 main .portfolio.column {
