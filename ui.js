@@ -138,7 +138,7 @@ function heroParallax() {
     var heroHeight = hero.height();
     var heroBottom = heroTop + heroHeight;
     var imageModifier = 200;
-    var headlineModifier = 50;
+    var headlineModifier = 100;
     var scrollPosition = getScrollPosition();
     var bottomScrollPosition = scrollPosition + globalViewportHeight;
     var bottomOffset = bottomScrollPosition - heroBottom;
@@ -151,8 +151,8 @@ function heroParallax() {
       if ( heroBottom > scrollPosition) {
         if ( heroBottom < bottomScrollPosition) {
           var percentScrolled = 1 - (((heroBottom + bottomOffset) - scrollPosition)/globalViewportHeight);
-          $('img.parallax').css('transform','translateY(' + imageModifier*percentScrolled + 'px)');
-          $('#dramatic-headline').css('transform','translateY(' + headlineModifier*percentScrolled + 'px)');
+          $('img.parallax').css('transform','translateY(-' + imageModifier*percentScrolled + 'px)');
+          $('#dramatic-headline').css('transform','translateY(-' + headlineModifier*percentScrolled + 'px)');
         }
       }
     });
