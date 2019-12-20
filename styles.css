@@ -49,13 +49,13 @@
   background-color: #ABD397;
   background-image: url("images/futura/thumbnail.png");
 }
-.column.hybrid-row .column.project .column.lost-places {
-  background-color: #eeeeee;
-  background-image: url("images/lost-places/thumbnail.png");
-}
 .column.hybrid-row .column.project .column.type-lamp {
   background-color: #FFC553;
   background-image: url("images/type-lamp/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.lost-places {
+  background-color: #eeeeee;
+  background-image: url("images/lost-places/thumbnail.png");
 }
 .column.hybrid-row .column.project .column.color-me {
   background-color: #F98668;
