@@ -126,6 +126,7 @@ header {
 #mark {
   display: inline-block;
   width: 50px;
+  cursor: pointer;
 }
 #ligature-fill {
   fill: #FF6666;
