@@ -152,7 +152,7 @@ function heroParallax() {
         if ( heroBottom < bottomScrollPosition) {
           var percentScrolled = 1 - (((heroBottom + bottomOffset) - scrollPosition)/globalViewportHeight);
           $('img.parallax').css('transform','translateY(-' + imageModifier*percentScrolled + 'px)');
-          $('#dramatic-headline').css('transform','translateY(-' + headlineModifier*percentScrolled + 'px)');
+          $('#dramatic-headline').css('transform','translateY(' + headlineModifier*percentScrolled + 'px)');
         }
       }
     });
