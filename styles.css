@@ -17,9 +17,49 @@
   background-color: #6B9287;
   background-image: url("images/bigger-picture/thumbnail.png");
 }
+.column.hybrid-row .column.project .column.jason {
+  background-color: #002B56;
+  background-image: url("images/jason/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.edison {
+  background-color: #EFD84E;
+  background-image: url("images/edison/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.mrs-eaves {
+  background-color: #E96658;
+  background-image: url("images/mrs-eaves/thumbnail.png");
+}
 .column.hybrid-row .column.project .column.everyday {
-  background-color: #6B9287;
+  background-color: #40C8C2;
   background-image: url("images/everyday/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.foot-forward {
+  background-color: #FE58BC;
+  background-image: url("images/foot-forward/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.crescendo {
+  background-color: #4D0675;
+  background-image: url("images/crescendo/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.evolve-ky {
+  background-color: #60A3DB;
+  background-image: url("images/evolve-ky/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.futura {
+  background-color: #ABD397;
+  background-image: url("images/futura/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.lost-places {
+  background-color: #eeeeee;
+  background-image: url("images/lost-places/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.type-lamp {
+  background-color: #FFC553;
+  background-image: url("images/type-lamp/thumbnail.png");
+}
+.column.hybrid-row .column.project .column.color-me {
+  background-color: #F98668;
+  background-image: url("images/color-me/thumbnail.png");
 }
 /* Selection Styles */
 ::selection {
