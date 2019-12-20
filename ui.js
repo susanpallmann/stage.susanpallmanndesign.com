@@ -179,7 +179,6 @@ $(window).scroll(function() {
       //Scroll timer value
     }, 100));
   } else {
-    console.log("not running anything :)");
   }
 });
 /* Please say editing it magically fixed the problem */
