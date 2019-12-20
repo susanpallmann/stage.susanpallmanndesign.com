@@ -711,6 +711,11 @@ select#portfolio-filter {
   cursor: pointer;
   outline: none;
 }
+select#portfolio-filter:focus {
+	background-color: #cccccc;
+  color: #ffffff;
+	outline: none;
+}
 /* Portfolio Grid */
 main .portfolio.column {
   margin-top: 0;
