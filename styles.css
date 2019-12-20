@@ -710,6 +710,9 @@ select#portfolio-filter {
   -webkit-transition-timing-function: linear;
   cursor: pointer;
   outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 select#portfolio-filter:focus {
 	background-color: #cccccc;
