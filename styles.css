@@ -714,10 +714,15 @@ select#portfolio-filter {
   -webkit-appearance: none;
   appearance: none;
 }
-select#portfolio-filter:hover {
+select#portfolio-filter:focus {
+  outline: none;
+  border-radius: 50px;
+}
+select#portfolio-filter:focus option {
+}
+select#portfolio-filter:focus option:hover {
   background-color: #cccccc;
   color: #ffffff;
-  outline: none;
 }
 /* Portfolio Grid */
 main .portfolio.column {
