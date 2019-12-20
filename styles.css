@@ -683,6 +683,32 @@ p#footer-title {
   width: 100%;
   margin: 0;
 }
+/* Portfolio Filter */
+h3.grid-title {
+  float: left;
+}
+#filter {
+  float: right;
+  margin-top: 0.5em;
+}
+select#portfolio-filter {
+  border: none;
+  padding: 0.3em 0.6em;
+  background-color: #E6E6E6;
+  color: #888;
+  border-radius: 50px;
+  font-size: 0.8em;
+  margin: 0.2em 0 0.2em 0;
+  display: inline-block;
+  line-height: 1.8em;
+  transition-property: color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-timing-function: linear;
+  cursor: pointer;
+}
 /* Portfolio Grid */
 main .portfolio.column {
   margin-top: 0;
