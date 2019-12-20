@@ -397,6 +397,7 @@ nav#horizontal li:after {
   position: relative;
   line-height: 0;
   top: 50%;
+  display: inline-block;
 }
 #hero .image-container {
   margin: 0;
