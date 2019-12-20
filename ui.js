@@ -138,7 +138,7 @@ function heroParallax() {
     var heroHeight = hero.height();
     var heroBottom = heroTop + heroHeight;
     var imageModifier = 200;
-    var headlineModifier = 100;
+    var headlineModifier = 50;
     var scrollPosition = getScrollPosition();
     var bottomScrollPosition = scrollPosition + globalViewportHeight;
     var bottomOffset = bottomScrollPosition - heroBottom;
