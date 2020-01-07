@@ -545,6 +545,14 @@ span.tag:hover {
   background-color: #cccccc;
   color: #ffffff;
 }
+span.tag:active {
+  background-color: #cccccc;
+  color: #ffffff;
+}
+span.tag.selected {
+  background-color: #cccccc;
+  color: #ffffff;
+}
 /* Buttons */
 .button-container {
   text-align: center;
@@ -690,6 +698,7 @@ h3.grid-title {
 #filter {
   float: right;
   margin-top: 0.5em;
+  margin-bottom: 3em;
 }
 select#portfolio-filter {
   font-family: 'open sans', sans-serif;
@@ -743,6 +752,9 @@ main .portfolio.column {
   background-image: url("");
   background-size: cover;
   background-position: center;
+}
+.column.hybrid-row .column.project .column.imgParallax {
+  background-position-y: -25px;
 }
 .overlay {
   height: 100%;
@@ -874,14 +886,14 @@ main .centered {
   #hero .container {
     margin-top: 100px;
   }
-  .column.hybrid-row .span4.project:nth-child(3n+1) {
-    padding: 0 0.66em 0 0 !important;
+  .column.hybrid-row .span4.project.visible:nth-child(3n+1) {
+    padding: 0 0.5em 0 0.5em !important;
   }
-  .column.hybrid-row .span4.project:nth-child(3n+2) {
-    padding: 0 0.33em 0 0.33em !important;
+  .column.hybrid-row .span4.project.visible:nth-child(3n+2) {
+    padding: 0 0.5em 0 0.5em !important;
   }
-  .column.hybrid-row .span4.project:nth-child(3n+3) {
-    padding: 0 0 0 0.66em !important;
+  .column.hybrid-row .span4.project.visible:nth-child(3n+3) {
+    padding: 0 0.5em 0 0.5em !important;
   }
   main .centered {
     font-size: 1em;
