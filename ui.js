@@ -2,6 +2,7 @@ $(document).ready(function() {
   globalViewportHeight = getViewportHeight();
   globalPageHeight = getPageHeight();
   heroParallax();
+  parallax();
   pattern = 1;
 
   /* Adjust these global variables */
@@ -76,6 +77,19 @@ $(document).ready(function() {
         break;
       default:
         $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
+    }
+  });
+  $("#filter .tag").click(function() {
+    filter = $(this);
+    text = filter.html();
+    newText = text.toLowerCase().replace(' ','-');
+    $("#filter .tag").removeClass('selected');
+    $(this).addClass('selected');
+    if (newText === "view-all") {
+      $('.project .column').parents('.project').addClass('visible').css('display', 'inline-block');
+    } else {
+      $('.project .column').parents('.project').removeClass('visible').css('display', 'none');
+      $('.' + newText).parents('.project').addClass('visible').css('display', 'inline-block');
     }
   });
   
@@ -157,6 +171,33 @@ function heroParallax() {
       }
     });
   }
+}
+
+function parallax() {
+  $('.imgParallax').each( function(index) {
+    var image = $(this);
+    var imageOffset = image.offset();
+    var imageTop = imageOffset.top;
+    var imageHeight = image.height();
+    var imageBottom = imageTop + imageHeight;
+    var parallaxModifier = 50;
+    var scrollPosition = getScrollPosition();
+    var bottomScrollPosition = scrollPosition + globalViewportHeight;
+    var bottomOffset = bottomScrollPosition - imageBottom;
+    if (bottomOffset < 0) {
+      bottomOffset = 0;
+    }
+    $(window).scroll(function() {
+      var scrollPosition = getScrollPosition();
+      var bottomScrollPosition = scrollPosition + globalViewportHeight;
+      if ( imageBottom > scrollPosition) {
+        if ( imageBottom < bottomScrollPosition) {
+          var percentScrolled = 1 - (((imageBottom + bottomOffset) - scrollPosition)/globalViewportHeight);
+          image.css('background-position-y', (-25+parallaxModifier*percentScrolled) + 'px');
+        }
+      }
+    });
+  });
 }
 
 //Listen for when the user scrolls and then finishes scrolling (that is, stopped scrolling for 250 milliseconds)
