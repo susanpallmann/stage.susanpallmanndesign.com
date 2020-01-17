@@ -92,7 +92,6 @@ $(document).ready(function() {
       $('.' + newText).parents('.project').addClass('visible').css('display', 'inline-block');
     }
   });
-  
   //Expands or collapses panels with this switch in them
   //When the user clicks on an expand/collapse toggle
   $('.read-more').click(function () {
@@ -115,6 +114,62 @@ $(document).ready(function() {
       container.find('.expandable').removeClass('collapsed');
     }
   });
+  
+  //Gallery widget functionality
+  $('.gallery-right').click(function() {
+    var button = $(this);
+    var gallery = button.parents('.gallery');
+    var galleryNum = parseInt(gallery.attr('data-img-num'));
+    console.log(galleryNum);
+    var currentImg = gallery.find('.gallery-img');
+    var imgNum = parseInt(currentImg.attr('data-current-img'));
+    console.log(imgNum);
+    if (gallery.hasClass('gallery-anim')) {
+      gallery.fadeOut(0);
+      if ( imgNum === galleryNum) {
+        imgNum = 1;
+      } else {
+        imgNum++;
+      }
+      currentImg.attr('data-current-img',imgNum);
+      gallery.fadeIn(400);
+    } else {
+      if ( imgNum === galleryNum) {
+        imgNum = 1;
+      } else {
+        imgNum++;
+      }
+      currentImg.attr('data-current-img',imgNum);
+    }
+  });
+  $('.gallery-left').click(function() {
+    var button = $(this);
+    var gallery = button.parents('.gallery');
+    var galleryNum = parseInt(gallery.attr('data-img-num'));
+    console.log(galleryNum);
+    var currentImg = gallery.find('.gallery-img');
+    var imgNum = parseInt(currentImg.attr('data-current-img'));
+    if (gallery.hasClass('gallery-anim')) {
+      gallery.fadeOut(0);
+      console.log(imgNum);
+      if ( imgNum === 1) {
+        imgNum = galleryNum;
+      } else {
+        imgNum--;
+      }
+      currentImg.attr('data-current-img',imgNum);
+      gallery.fadeIn(400);
+    } else {
+      console.log(imgNum);
+      if ( imgNum === 1) {
+        imgNum = galleryNum;
+      } else {
+        imgNum--;
+      }
+      currentImg.attr('data-current-img',imgNum);
+    }
+  });  
+  
 });
 
 window.onload = function() {
