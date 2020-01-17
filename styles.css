@@ -401,11 +401,15 @@ nav#horizontal li:after {
 }
 .gallery-img {
   height: 400px;
-  width: 100%;
+  width: 80%;
   display: block;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+.gallery-button-container {
+  height: 100%;
+  width: 10%;
 }
 .gallery-left {
   margin-left: 1em;
