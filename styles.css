@@ -677,6 +677,12 @@ span.tag.selected {
 img {
   width: 100%;
 }
+img.sketch {
+  opacity: 0.8;
+  background-image: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.04));
+  padding: 1em;
+  box-sizing: border-box;
+}
 /* Footer Styles */
 footer {
   background-color: #483C46;
