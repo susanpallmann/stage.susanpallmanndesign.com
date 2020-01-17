@@ -125,14 +125,14 @@ $(document).ready(function() {
     var imgNum = parseInt(currentImg.attr('data-current-img'));
     console.log(imgNum);
     if (gallery.hasClass('gallery-anim')) {
-      gallery.fadeOut(0);
+      currentImg.fadeOut(0);
       if ( imgNum === galleryNum) {
         imgNum = 1;
       } else {
         imgNum++;
       }
       currentImg.attr('data-current-img',imgNum);
-      gallery.fadeIn(400);
+      currentImg.fadeIn(400);
     } else {
       if ( imgNum === galleryNum) {
         imgNum = 1;
@@ -150,7 +150,7 @@ $(document).ready(function() {
     var currentImg = gallery.find('.gallery-img');
     var imgNum = parseInt(currentImg.attr('data-current-img'));
     if (gallery.hasClass('gallery-anim')) {
-      gallery.fadeOut(0);
+      currentImg.fadeOut(0);
       console.log(imgNum);
       if ( imgNum === 1) {
         imgNum = galleryNum;
@@ -158,7 +158,7 @@ $(document).ready(function() {
         imgNum--;
       }
       currentImg.attr('data-current-img',imgNum);
-      gallery.fadeIn(400);
+      currentImg.fadeIn(400);
     } else {
       console.log(imgNum);
       if ( imgNum === 1) {
