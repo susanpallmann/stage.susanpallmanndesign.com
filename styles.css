@@ -677,7 +677,7 @@ span.tag.selected {
 img {
   width: 100%;
 }
-image-padding {
+.image-padding {
   box-sizing: border-box;
   padding: 1em;
 }
