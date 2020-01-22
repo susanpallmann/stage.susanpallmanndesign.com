@@ -679,7 +679,8 @@ img {
 }
 .image-padding {
   box-sizing: border-box;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 img.sketch {
   opacity: 0.8;
