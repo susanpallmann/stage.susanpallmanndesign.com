@@ -18,6 +18,17 @@
   background-color: #6B9287;
   background-image: url("images/bigger-picture/thumbnail.png");
 }
+#gallery-big-pic {
+}
+#gallery-big-pic .gallery-img[data-current-img="1"] {
+  background-image: url("images/bigger-picture/gallery-1.png");
+}
+#gallery-big-pic .gallery-img[data-current-img="2"] {
+  background-image: url("images/bigger-picture/gallery-2.png");
+}
+#gallery-big-pic .gallery-img[data-current-img="3"] {
+  background-image: url("images/bigger-picture/gallery-3.png");
+}
 /* Jason Submarines */
 .jason#hero {
   background-color: #002B56;
