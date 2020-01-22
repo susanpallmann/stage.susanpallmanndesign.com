@@ -132,7 +132,7 @@ $(document).ready(function() {
         imgNum++;
       }
       currentImg.attr('data-current-img',imgNum);
-      currentImg.delay(50).fadeIn(400);
+      currentImg.fadeIn(400);
     } else {
       if ( imgNum === galleryNum) {
         imgNum = 1;
