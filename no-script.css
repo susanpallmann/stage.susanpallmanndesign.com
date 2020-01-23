@@ -1,3 +1,6 @@
 .script-display-none {
   display: block !important;
 }
+.animate-fade-in {
+  opacity: 1 !important;
+}
