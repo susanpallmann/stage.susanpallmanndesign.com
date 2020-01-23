@@ -282,7 +282,7 @@ $(window).scroll(function() {
     var windowBottom = $(window).scrollTop() + $(window).height();
     /* If the object is visible in the window, fade in */
     if( windowBottom > fadeLocation ){
-      $(this).delay(150).animate({'opacity':'1'},700);
+      $(this).delay(150).animate({'opacity':'1'},600);
     }
   });
 });
