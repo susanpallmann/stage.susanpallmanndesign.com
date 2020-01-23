@@ -312,3 +312,7 @@ main .container {
 i.material-icons.accordion-arrow {
   float: right;
 }
+/* Animations */
+.animate-fade-in {
+  opacity:0;
+}
