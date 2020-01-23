@@ -278,7 +278,7 @@ $(window).scroll(function() {
   }
   /* Get locations of page bottom and an arbitrary height of each element */
   $('.animate-fade-in').each( function(i){
-    var fadeLocation = $(this).offset().top + 100;
+    var fadeLocation = $(this).offset().top + 200;
     var windowBottom = $(window).scrollTop() + $(window).height();
     /* If the object is visible in the window, fade in */
     if( windowBottom > fadeLocation ){
