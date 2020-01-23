@@ -278,11 +278,11 @@ $(window).scroll(function() {
   }
   /* Get locations of page bottom and an arbitrary height of each element */
   $('.animate-fade-in').each( function(i){
-    var fadeLocation = $(this).offset().top + 200;
+    var fadeLocation = $(this).offset().top + 0.25*($(window).height());
     var windowBottom = $(window).scrollTop() + $(window).height();
     /* If the object is visible in the window, fade in */
     if( windowBottom > fadeLocation ){
-      $(this).animate({'opacity':'1'},500);
+      $(this).delay(100).animate({'opacity':'1'},500);
     }
   });
 });
