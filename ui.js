@@ -120,10 +120,8 @@ $(document).ready(function() {
     var button = $(this);
     var gallery = button.parents('.gallery');
     var galleryNum = parseInt(gallery.attr('data-img-num'));
-    console.log(galleryNum);
     var currentImg = gallery.find('.gallery-img');
     var imgNum = parseInt(currentImg.attr('data-current-img'));
-    console.log(imgNum);
     if (gallery.hasClass('gallery-anim')) {
       currentImg.animate({'opacity':'0'},100);
       if ( imgNum === galleryNum) {
@@ -131,8 +129,10 @@ $(document).ready(function() {
       } else {
         imgNum++;
       }
-      currentImg.delay(100).attr('data-current-img',imgNum);
-      currentImg.delay(100).animate({'opacity':'1'},400);
+      currentImg
+        .delay(100)
+        .queue(function(next) { $(this).attr('data-current-img',imgNum); next(); })
+        .animate({'opacity':'1'},400);
     } else {
       if ( imgNum === galleryNum) {
         imgNum = 1;
@@ -146,21 +146,20 @@ $(document).ready(function() {
     var button = $(this);
     var gallery = button.parents('.gallery');
     var galleryNum = parseInt(gallery.attr('data-img-num'));
-    console.log(galleryNum);
     var currentImg = gallery.find('.gallery-img');
     var imgNum = parseInt(currentImg.attr('data-current-img'));
     if (gallery.hasClass('gallery-anim')) {
       currentImg.animate({'opacity':'0'},100);
-      console.log(imgNum);
       if ( imgNum === 1) {
         imgNum = galleryNum;
       } else {
         imgNum--;
       }
-      currentImg.delay(100).attr('data-current-img',imgNum);
-      currentImg.delay(100).animate({'opacity':'1'},400);
+      currentImg
+        .delay(100)
+        .queue(function(next) { $(this).attr('data-current-img',imgNum); next(); })
+        .animate({'opacity':'1'},400);
     } else {
-      console.log(imgNum);
       if ( imgNum === 1) {
         imgNum = galleryNum;
       } else {
