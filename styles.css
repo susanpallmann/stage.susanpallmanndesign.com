@@ -691,6 +691,7 @@ span.tag.selected {
   font-size: 0.85em;
   font-family: 'raleway';
   color: #ff6666;
+  cursor: pointer;
 }
 .link-button:hover {
   color: #666666;
