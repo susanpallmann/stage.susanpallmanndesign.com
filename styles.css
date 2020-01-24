@@ -737,6 +737,10 @@ img.sketch {
   padding: 1em;
   box-sizing: border-box;
 }
+.shadow-border {
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
 /* Footer Styles */
 footer {
   background-color: #483C46;
