@@ -132,7 +132,7 @@ $(document).ready(function() {
         imgNum++;
       }
       currentImg.attr('data-current-img',imgNum);
-      .animate({'opacity':'1'},400);
+      currentImg.animate({'opacity':'1'},400);
     } else {
       if ( imgNum === galleryNum) {
         imgNum = 1;
