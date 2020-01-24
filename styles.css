@@ -684,6 +684,17 @@ span.tag.selected {
 .button:hover {
   background-image: linear-gradient(#FF6666, #EE8293);
 }
+.link-button {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+  font-family: 'raleway';
+  color: #ff6666;
+}
+.link-button:hover {
+  color: #666666;
+}
 /* Images */
 img {
   width: 100%;
