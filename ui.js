@@ -132,7 +132,7 @@ $(document).ready(function() {
         imgNum++;
       }
       currentImg.attr('data-current-img',imgNum);
-      currentImg.animate({'opacity':'1'},600);
+      currentImg.delay(100).animate({'opacity':'1'},600);
     } else {
       if ( imgNum === galleryNum) {
         imgNum = 1;
@@ -158,7 +158,7 @@ $(document).ready(function() {
         imgNum--;
       }
       currentImg.attr('data-current-img',imgNum);
-      currentImg.animate({'opacity':'1'},600);
+      currentImg.delay(100).animate({'opacity':'1'},600);
     } else {
       console.log(imgNum);
       if ( imgNum === 1) {
