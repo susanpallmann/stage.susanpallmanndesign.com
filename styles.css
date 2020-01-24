@@ -60,6 +60,12 @@
   background-image: url("images/edison/thumbnail.png");
 }
 /* Mrs Eaves */
+.mrs-eaves#hero {
+  background-color: #E96658;
+}
+.mrseaves#hero #dramatic-headline {
+  color: #E25546;
+}
 .column.hybrid-row .column.project .column.mrs-eaves {
   background-color: #E96658;
   background-image: url("images/mrs-eaves/thumbnail.png");
