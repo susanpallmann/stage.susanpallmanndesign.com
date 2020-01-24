@@ -442,7 +442,6 @@ nav#horizontal li:after {
   flex-wrap: wrap;
 }
 .gallery-img {
-  height: 400px;
   width: 80%;
   display: block;
   background-size: contain;
@@ -969,6 +968,9 @@ main .centered {
   .footer-list.to33 {
     width: 33.33%;
   }
+  .gallery-img {
+    height: 150px;
+  }
 }
 /* Major Breakpoint || Mobile */
 @media only screen and (min-width: 321px) {
@@ -990,6 +992,9 @@ main .centered {
   }
   .footer-list.to33 {
     width: 33.33%;
+  }
+  .gallery-img {
+    height: 200px;
   }
 }
 /* Mobile Horizontal & Tablets */
@@ -1018,6 +1023,9 @@ main .centered {
   }
   footer .signature {
     text-align: left;
+  }
+  .gallery-img {
+    height: 300px;
   }
 }
 /* Major Breakpoint || Tablets & Small Desktops */
@@ -1058,6 +1066,9 @@ main .centered {
     width: auto;
     margin: 2em 0 2em 0;
   }
+  .gallery-img {
+    height: 400px;
+  }
 }
 /* Major Breakpoint || Desktop & Up */
 @media only screen and (min-width: 1024px) {
@@ -1067,6 +1078,9 @@ main .centered {
     padding-right: 4em;
     width: auto;
     margin: 2em 0 2em 0;
+  }
+  .gallery-img {
+    height: 400px;
   }
 }
 /* Desktop (Includes Margins) */
