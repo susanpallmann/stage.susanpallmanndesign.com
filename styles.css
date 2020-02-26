@@ -424,7 +424,7 @@ nav li:after {
 nav li:hover:after {
   transform: scaleX(1);
 }
-nav li#selected:after {
+nav li.selected:after {
   display:block;
   content: '';
   border-bottom: solid 3px #4ECDC4;
