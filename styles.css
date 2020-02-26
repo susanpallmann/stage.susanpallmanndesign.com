@@ -123,11 +123,11 @@
 /* Thesis Project */
 /* Selection Styles */
 ::selection {
-  background: #FF6666;
+  background: #518BE3;
   color: #fff;
 }
 ::-moz-selection {
-  background: #FF6666;
+  background: #518BE3;
   color: #fff;
 }
 img::selection {
