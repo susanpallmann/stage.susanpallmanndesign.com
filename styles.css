@@ -847,6 +847,11 @@ p#footer-title {
 .socials-icon svg:hover {
   fill: #ff6666;
 }
+main .socials-icon svg {
+  fill: #483C46;
+  transition: fill 0.15s ease-in-out;
+  -webkit-transition: fill 0.15s ease-in-out;
+}
 .dark-box {
   background-color: #3F353D;
 }
