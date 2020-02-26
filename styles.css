@@ -627,6 +627,9 @@ main p {
   margin-bottom: 1em;
   display: inline;
 }
+p.small {
+  font-size: 0.7em;
+}
 a {
   color: #FF6666;
 }
@@ -739,7 +742,7 @@ span.tag.selected {
 }
 /* Forms */
 form {
-  margin: 2em 0;
+  margin: 2em 0 0 0;
 }
 input[type=text], textarea {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
