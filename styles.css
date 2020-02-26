@@ -735,6 +735,9 @@ span.tag.selected {
   color: #666666;
 }
 /* Forms */
+form {
+  margin: 2em 0;
+}
 input[type=text] {
   font-family: 'open sans';
   padding: 0.5em;
@@ -743,6 +746,8 @@ input[type=text] {
   max-width: 350px;
   width: 100%;
   box-sizing: border-box;
+  display: block;
+  margin-bottom: 1em;
 }
 /* Images */
 img {
