@@ -742,12 +742,18 @@ input[type=text] {
   font-family: 'open sans';
   padding: 0.5em;
   border-radius: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   max-width: 350px;
   width: 100%;
   box-sizing: border-box;
   display: block;
   margin-bottom: 1em;
+}
+input[type=text]:focus {
+  border: 1px solid #518be3;
+}
+input[type=text][validation="error"] {
+  border: 1px solid #ff6666;
 }
 /* Images */
 img {
