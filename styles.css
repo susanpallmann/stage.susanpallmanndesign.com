@@ -786,17 +786,11 @@ img.sketch {
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
-img.profile {
-  padding: 0 2em;
-}
-img.profile:nth-child(3n) {
+img.profile.serious {
   background-color: #68B2B2;
 }
-img.profile:nth-child(3n+1) {
+img.profile.silly {
   background-color: #EDC24A;
-}
-img.profile:nth-child(3n+2) {
-  background-color: #FF6666;
 }
 /* Footer Styles */
 footer {
