@@ -139,13 +139,16 @@ img::-moz-selection {
   color: #fff;
 }
 /* Bootstrap Add-Ons */
-html, body {
+html {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 .hybrid-row p {
@@ -966,8 +969,8 @@ main .centered {
 @media only screen and (max-width: 320px) {
   #hero .container {
   }
-  body {
-    padding-bottom: 610px;
+  footer {
+    height: 610px;
   }
   .footer-list {
     padding-right: 2em;
@@ -989,8 +992,8 @@ main .centered {
 }
 /* Major Breakpoint || Mobile */
 @media only screen and (min-width: 321px) {
-  body {
-    padding-bottom: 500px;
+  footer {
+    height: 500px;
   }
   #hero {
     height: 400px;
@@ -1017,8 +1020,8 @@ main .centered {
 }
 /* Mobile Horizontal & Tablets */
 @media only screen and (min-width: 601px) {
-  body {
-    padding-bottom: 374px;
+  footer {
+    height: 374px;
   }
   #hero {
     height: 600px;
@@ -1051,8 +1054,8 @@ main .centered {
 }
 /* Major Breakpoint || Tablets & Small Desktops */
 @media only screen and (min-width: 721px) {
-  body {
-    padding-bottom: 357px;
+  footer {
+    height: 357px;
   }
   .spacer {
     padding-right: 8.33%;
@@ -1096,8 +1099,8 @@ main .centered {
 }
 /* Major Breakpoint || Desktop & Up */
 @media only screen and (min-width: 1024px) {
-  body {
-    padding-bottom: 357px;
+  footer {
+    height: 357px;
   }
   #hero {
   }
@@ -1112,8 +1115,8 @@ main .centered {
 }
 /* Desktop (Includes Margins) */
 @media only screen and (min-width: 1056px) {
-  body {
-    padding-bottom: 233px;
+  footer {
+    height: 233px;
   }
   .button-container {
     text-align: left;
