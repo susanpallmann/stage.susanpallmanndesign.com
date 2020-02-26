@@ -739,7 +739,8 @@ form {
   margin: 2em 0;
 }
 input[type=text], textarea {
-  font-family: 'open sans';
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 0.9em;
   padding: 0.5em;
   border-radius: 2px;
   border: 1px solid #cccccc;
