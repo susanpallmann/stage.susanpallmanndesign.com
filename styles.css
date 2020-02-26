@@ -139,18 +139,6 @@ img::-moz-selection {
   color: #fff;
 }
 /* Bootstrap Add-Ons */
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
 .hybrid-row p {
   display: inline-block;
 }
@@ -758,9 +746,6 @@ footer {
   color: #B2ADB1;
   font-size: 0.8em;
   line-height: 1.8em;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 footer .row {
   margin-top: 0px;
@@ -969,9 +954,6 @@ main .centered {
 @media only screen and (max-width: 320px) {
   #hero .container {
   }
-  footer {
-    height: 610px;
-  }
   .footer-list {
     padding-right: 2em;
     margin: 2em 0 2em 0;
@@ -992,9 +974,6 @@ main .centered {
 }
 /* Major Breakpoint || Mobile */
 @media only screen and (min-width: 321px) {
-  footer {
-    height: 500px;
-  }
   #hero {
     height: 400px;
   }
@@ -1020,9 +999,6 @@ main .centered {
 }
 /* Mobile Horizontal & Tablets */
 @media only screen and (min-width: 601px) {
-  footer {
-    height: 374px;
-  }
   #hero {
     height: 600px;
   }
@@ -1054,9 +1030,6 @@ main .centered {
 }
 /* Major Breakpoint || Tablets & Small Desktops */
 @media only screen and (min-width: 721px) {
-  footer {
-    height: 357px;
-  }
   .spacer {
     padding-right: 8.33%;
     box-sizing: border-box;
@@ -1099,9 +1072,6 @@ main .centered {
 }
 /* Major Breakpoint || Desktop & Up */
 @media only screen and (min-width: 1024px) {
-  footer {
-    height: 357px;
-  }
   #hero {
   }
   .footer-list.to50, .footer-list.to33, .footer-list.to100 {
@@ -1115,10 +1085,7 @@ main .centered {
 }
 /* Desktop (Includes Margins) */
 @media only screen and (min-width: 1056px) {
-  footer {
-    height: 233px;
-  }
-  .button-container {
+.button-container {
     text-align: left;
   }
 }
