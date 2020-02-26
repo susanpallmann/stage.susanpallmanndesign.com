@@ -652,7 +652,7 @@ a:hover {
   padding: 0;
 }
 #project-meta li {
-  display: inline-block;
+  display: block;
 }
 .horizontal#project-meta ul {
   display: inline-block;
