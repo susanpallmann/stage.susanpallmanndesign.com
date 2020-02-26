@@ -967,7 +967,7 @@ main .centered {
   #hero .container {
   }
   main {
-    margin-bottom:;
+    margin-bottom: 610px;
   }
   .footer-list {
     padding-right: 2em;
@@ -989,6 +989,9 @@ main .centered {
 }
 /* Major Breakpoint || Mobile */
 @media only screen and (min-width: 321px) {
+  main {
+    margin-bottom: 500px;
+  }
   #hero {
     height: 400px;
   }
@@ -1014,6 +1017,9 @@ main .centered {
 }
 /* Mobile Horizontal & Tablets */
 @media only screen and (min-width: 601px) {
+  main {
+    margin-bottom: 374px;
+  }
   #hero {
     height: 600px;
   }
@@ -1045,6 +1051,9 @@ main .centered {
 }
 /* Major Breakpoint || Tablets & Small Desktops */
 @media only screen and (min-width: 721px) {
+  main {
+    margin-bottom: 357px;
+  }
   .spacer {
     padding-right: 8.33%;
     box-sizing: border-box;
@@ -1087,6 +1096,9 @@ main .centered {
 }
 /* Major Breakpoint || Desktop & Up */
 @media only screen and (min-width: 1024px) {
+  main {
+    margin-bottom: 357px;
+  }
   #hero {
   }
   .footer-list.to50, .footer-list.to33, .footer-list.to100 {
@@ -1100,7 +1112,10 @@ main .centered {
 }
 /* Desktop (Includes Margins) */
 @media only screen and (min-width: 1056px) {
-.button-container {
+  main {
+    margin-bottom: 233px;
+  }
+  .button-container {
     text-align: left;
   }
 }
