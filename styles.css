@@ -760,10 +760,10 @@ input[type=text][validation="error"], textarea[validation="error"] {
 label {
   text-transform: uppercase;
   font-size: 0.7em;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.15em;
   margin: 0;
-  color: #FF6666;
+  color: #666666;
 }
 /* Images */
 img {
