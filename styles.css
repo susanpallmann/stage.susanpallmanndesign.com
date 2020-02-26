@@ -168,6 +168,9 @@ main {
   padding-right: 0;
   box-sizing: border-box;
 }
+container.no-hero {
+  margin-top: 5em;
+}
 .colorblock {
   background-color: #FAFAFA;
   display: inline-block;
