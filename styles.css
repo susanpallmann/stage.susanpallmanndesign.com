@@ -734,6 +734,16 @@ span.tag.selected {
 .link-button:hover {
   color: #666666;
 }
+/* Forms */
+input[type=text] {
+  font-family: 'open sans';
+  padding: 0.5em;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+}
 /* Images */
 img {
   width: 100%;
