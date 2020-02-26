@@ -198,16 +198,16 @@ header {
   padding: 0px 10px 8px 10px;
 }
 /* Logo Mark */
-#mark {
+.mark {
   display: inline-block;
   width: 50px;
   cursor: pointer;
 }
-#ligature-fill {
+.ligature-fill {
   fill: #FF5C5C;
   opacity: 1;
 }
-.sp-icon:hover #ligature-fill {
+.sp-icon:hover .ligature-fill {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
