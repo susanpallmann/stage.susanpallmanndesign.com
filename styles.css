@@ -768,7 +768,7 @@ label {
   margin: 0;
   color: #666666;
 }
-input[type=button] {
+input[type=submit] {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-size: 0.95em;
   font-weight: 700;
@@ -789,7 +789,7 @@ input[type=button] {
   -webkit-transition-duration: .2s;
   -webkit-transition-timing-function: linear; 
 }
-input[type=button]:hover {
+input[type=submit]:hover {
   background-image: linear-gradient(#FF6666, #EE8293);
 }
 /* Images */
