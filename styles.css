@@ -755,6 +755,9 @@ input[type=text]:focus {
 input[type=text][validation="error"] {
   border: 1px solid #ff6666;
 }
+#form-message {
+  height: 3em;
+}
 /* Images */
 img {
   width: 100%;
