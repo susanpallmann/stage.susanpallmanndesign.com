@@ -786,6 +786,9 @@ img.sketch {
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
+img.profile {
+  padding: 0 2em;
+}
 img.profile:nth-child(3n) {
   background-color: #68B2B2;
 }
