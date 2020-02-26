@@ -966,8 +966,8 @@ main .centered {
 @media only screen and (max-width: 320px) {
   #hero .container {
   }
-  main {
-    margin-bottom: 610px;
+  body {
+    padding-bottom: 610px;
   }
   .footer-list {
     padding-right: 2em;
@@ -989,8 +989,8 @@ main .centered {
 }
 /* Major Breakpoint || Mobile */
 @media only screen and (min-width: 321px) {
-  main {
-    margin-bottom: 500px;
+  body {
+    padding-bottom: 500px;
   }
   #hero {
     height: 400px;
@@ -1017,8 +1017,8 @@ main .centered {
 }
 /* Mobile Horizontal & Tablets */
 @media only screen and (min-width: 601px) {
-  main {
-    margin-bottom: 374px;
+  body {
+    padding-bottom: 374px;
   }
   #hero {
     height: 600px;
@@ -1051,8 +1051,8 @@ main .centered {
 }
 /* Major Breakpoint || Tablets & Small Desktops */
 @media only screen and (min-width: 721px) {
-  main {
-    margin-bottom: 357px;
+  body {
+    padding-bottom: 357px;
   }
   .spacer {
     padding-right: 8.33%;
@@ -1096,8 +1096,8 @@ main .centered {
 }
 /* Major Breakpoint || Desktop & Up */
 @media only screen and (min-width: 1024px) {
-  main {
-    margin-bottom: 357px;
+  body {
+    padding-bottom: 357px;
   }
   #hero {
   }
@@ -1112,8 +1112,8 @@ main .centered {
 }
 /* Desktop (Includes Margins) */
 @media only screen and (min-width: 1056px) {
-  main {
-    margin-bottom: 233px;
+  body {
+    padding-bottom: 233px;
   }
   .button-container {
     text-align: left;
