@@ -224,8 +224,8 @@ function heroParallax() {
             $('#dramatic-headline').css('transform','translateY(' + headlineModifier*percentScrolled + 'px)');
           }
         }
-      }
-    });
+      });
+    }
   }
 }
 
