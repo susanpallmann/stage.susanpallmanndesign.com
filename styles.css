@@ -757,6 +757,14 @@ input[type=text]:focus, textarea:focus {
 input[type=text][validation="error"], textarea[validation="error"] {
   border: 1px solid #ff6666;
 }
+label {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0;
+  color: #FF6666;
+}
 /* Images */
 img {
   width: 100%;
