@@ -768,6 +768,30 @@ label {
   margin: 0;
   color: #666666;
 }
+input[type=button] {
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  background-color: #f66;
+  background-image: linear-gradient(#FF6666, #FF6666);
+  padding: 0.3em 1.2em;
+  color: #fff;
+  border-radius: 15px;
+  margin-top: 1em;
+  display: inline-block;
+  transition-property: background-image;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+  -webkit-transition-property: background-image;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-timing-function: linear; 
+}
+input[type=button]:hover {
+  background-image: linear-gradient(#FF6666, #EE8293);
+}
 /* Images */
 img {
   width: 100%;
