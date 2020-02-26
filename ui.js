@@ -35,7 +35,7 @@ $(document).ready(function() {
     }
   });
   
-  $("#mark").click(function() {
+  $(".mark").click(function() {
     if (location.pathname == "/") {
       scrollToTop();
     } else {
