@@ -748,6 +748,7 @@ input[type=text], textarea {
   box-sizing: border-box;
   display: block;
   margin-bottom: 1em;
+  background-color: #F9F9F9;
 }
 input[type=text]:focus, textarea:focus {
   border: 1px solid #518be3;
