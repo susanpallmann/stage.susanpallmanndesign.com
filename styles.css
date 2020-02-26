@@ -139,6 +139,15 @@ img::-moz-selection {
   color: #fff;
 }
 /* Bootstrap Add-Ons */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+}
 .hybrid-row p {
   display: inline-block;
 }
@@ -746,6 +755,9 @@ footer {
   color: #B2ADB1;
   font-size: 0.8em;
   line-height: 1.8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 footer .row {
   margin-top: 0px;
@@ -953,6 +965,9 @@ main .centered {
 /* Very Small Screens */
 @media only screen and (max-width: 320px) {
   #hero .container {
+  }
+  main {
+    margin-bottom:;
   }
   .footer-list {
     padding-right: 2em;
