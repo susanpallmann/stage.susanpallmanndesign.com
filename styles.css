@@ -168,7 +168,7 @@ main {
   padding-right: 0;
   box-sizing: border-box;
 }
-container.no-hero {
+.container.no-hero {
   margin-top: 5em;
 }
 .colorblock {
