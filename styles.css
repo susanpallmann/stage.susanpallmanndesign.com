@@ -95,6 +95,12 @@
   background-color: #3b317a;
   background-image: url("images/crescendo/thumbnail.png");
 }
+.crescendo#hero {
+  background-color: #3b317a;
+}
+.crescendo#hero #dramatic-headline {
+  color: #372E70;
+}
 /* Evolve KY */
 .column.hybrid-row .column.project .column.evolve-ky {
   background-color: #60A3DB;
