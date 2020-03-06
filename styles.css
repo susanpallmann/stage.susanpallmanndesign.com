@@ -86,10 +86,6 @@
 .foot-forward#hero #dramatic-headline {
   color: #FF81CD;
 }
-.column.hybrid-row .column.project .column.foot-forward {
-  background-color: #FE58BC;
-  background-image: url("images/foot-forward/thumbnail.png");
-}
 /* Crescendo */
 .column.hybrid-row .column.project .column.crescendo {
   background-color: #3b317a;
@@ -105,6 +101,12 @@
 .column.hybrid-row .column.project .column.evolve-ky {
   background-color: #60A3DB;
   background-image: url("images/evolve-ky/thumbnail.png");
+}
+.evolve-ky#hero {
+  background-color: #60A3DB;
+}
+.evolve-ky#hero #dramatic-headline {
+  color: #5B9BCF;
 }
 /* Futura Zine */
 .column.hybrid-row .column.project .column.futura {
