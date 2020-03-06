@@ -126,7 +126,17 @@
   background-color: #E56237;
   background-image: url("images/color-me/thumbnail.png");
 }
-/* Thesis Project */
+/* Onward Together */
+.onward-together#hero {
+  background-color: #242424;
+}
+.onward-together#hero #dramatic-headline {
+  color: #1D1D1D;
+}
+.column.hybrid-row .column.project .column.onward-together {
+  background-color: #242424;
+  background-image: url("images/onward-together/thumbnail.gif");
+}
 /* Selection Styles */
 ::selection {
   background: #518BE3;
