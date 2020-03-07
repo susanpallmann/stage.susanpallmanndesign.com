@@ -97,6 +97,10 @@
 .crescendo#hero #dramatic-headline {
   color: #372E70;
 }
+.crescendo#hero img.parallax {
+  padding: 5em;
+  box-sizing: border-box;
+}
 /* Evolve KY */
 .column.hybrid-row .column.project .column.evolve-ky {
   background-color: #60A3DB;
