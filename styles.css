@@ -645,6 +645,9 @@ main p {
   margin-bottom: 1em;
   display: inline;
 }
+.align-right {
+  text-align: right;
+}
 p.small-text {
   font-size: 0.7em;
 }
