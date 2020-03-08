@@ -43,7 +43,8 @@ $(document).ready(function() {
   });
   
   $(".mark").click(function() {
-    if (location.pathname == "/") {
+   //if (location.pathname == "/" || location.pathname == "/index.html") {
+    if (location.pathname == "/stage.susanpallmanndesign.com/" || location.pathname == "/stage.susanpallmanndesign.com/index.html") {
       scrollTo("body");
     } else {
       window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
