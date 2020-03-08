@@ -100,7 +100,7 @@ $(document).ready(function() {
       $('.project .column').parents('.project').removeClass('visible').css('display', 'none');
       $('.' + sort).parents('.project').addClass('visible').css('display', 'inline-block');
       $('.tag').removeClass('selected');
-      $('.tag' + sort).addClass('selected');
+      $('.tag-' + sort).addClass('selected');
     }
   }
   //Expands or collapses panels with this switch in them
