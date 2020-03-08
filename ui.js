@@ -1,10 +1,8 @@
 $(document).ready(function() {
+  // Calling functions on load & setting some global variables
   sortPortfolio();
-  globalViewportHeight = getViewportHeight();
-  globalPageHeight = getPageHeight();
   heroParallax();
   parallax();
-  pattern = 1;
 
   /* Adjust these global variables */
   // Speed of hamburger animation (milliseconds). Should match CSS animation speed.
@@ -12,10 +10,18 @@ $(document).ready(function() {
   /* End adjustable variables */
 
   /* Do not adjust these global variables */
+  // Retrieves height of viewport
+  globalViewportHeight = getViewportHeight();
+  // Retrieves full height of page, including what's not visible
+  globalPageHeight = getPageHeight();
+  // Tracks the current pattern under the ligature
+  pattern = 1;
+  // Can't remember what this is
   scrollValue = -100;
+  // Retrieves screen width, just like it says (there's no horizontal scrolling so this is both viewport and window width)
   screenWidth = screen.width;
-  /* End global variables */
 
+  /* Hamburger Menu Animation */
   $("#top_hamburger").click(function() {
     if ($(this).hasClass("animcomplete")) {
       $(this).removeClass("animcomplete");
@@ -37,7 +43,7 @@ $(document).ready(function() {
   });
   
   $(".mark").click(function() {
-    if (location.pathname == "/") {
+    if (window.location.pathname === "/") {
       scrollToTop();
     } else {
       window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
