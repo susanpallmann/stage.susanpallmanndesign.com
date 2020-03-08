@@ -139,12 +139,12 @@ $(document).ready(function() {
     }
   });
   $('.read-more').keydown(function(e) {
-		var code = e.which;
-		// 13 = Return, 32 = Space
-		if ((code === 13) || (code === 32)) {
-			$(this).click();
-		}
-	});
+    var code = e.which;
+    // 13 = Return, 32 = Space
+    if ((code === 13) || (code === 32)) {
+      $(this).click();
+    }
+  });
   //Gallery widget functionality
   $('.gallery-right').click(function() {
     var button = $(this);
@@ -197,7 +197,21 @@ $(document).ready(function() {
       }
       currentImg.attr('data-current-img',imgNum);
     }
-  });  
+  });
+  $('.gallery-right').keydown(function(e) {
+    var code = e.which;
+    // 13 = Return, 32 = Space
+    if ((code === 13) || (code === 32)) {
+      $(this).click();
+    }
+  });
+  $('.gallery-left').keydown(function(e) {
+    var code = e.which;
+    // 13 = Return, 32 = Space
+    if ((code === 13) || (code === 32)) {
+      $(this).click();
+    }
+  });
 });
 
 window.onload = function() {
