@@ -138,7 +138,7 @@ $(document).ready(function() {
       container.find('.expandable').removeClass('collapsed');
     }
   });
-  $('.read-more').keypress(function(event) { 
+  $('.read-more').keyup(function() { 
     if (event.keyCode === 13) { 
       $(this).click(); 
     }
