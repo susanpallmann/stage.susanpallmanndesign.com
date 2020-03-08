@@ -111,6 +111,28 @@ $(document).ready(function() {
       $('.tag-' + sort).addClass('selected');
     }
   }  
+  //Expands or collapses panels with this switch in them
+  //When the user clicks on an expand/collapse toggle
+  $('.read-more').click(function () {
+    var button = $(this);
+    var container = $(this).parents('.container');
+    
+    //jQuery default slideToggle effect
+    container.find('.expandable').slideToggle( "fast" );
+    
+    //If it's already checked
+    if (button.attr('aria-checked') === 'true') {
+      //Uncheck it, update the icon, expand text
+      button.attr('aria-checked','false');
+      button.html("View More ▼");
+      container.find('.expandable').addClass('collapsed');
+    } else {
+      //If it is not checked, check it, update the icon, collapse text
+      button.attr('aria-checked','true');
+      button.html("View Less ▲");
+      container.find('.expandable').removeClass('collapsed');
+    }
+  });
   //Gallery widget functionality
   $('.gallery-right').click(function() {
     var button = $(this);
@@ -165,30 +187,6 @@ $(document).ready(function() {
     }
   });  
 });
-
-//Expands or collapses panels with this switch in them
-//When the user clicks on an expand/collapse toggle
-function readMore() {
-  var button = $(this);
-  var container = $(this).parents('.container');
-  
-  //jQuery default slideToggle effect
-  container.find('.expandable').slideToggle( "fast" );
-  
-  //If it's already checked
-  if (button.attr('aria-checked') === 'true') {
-    //Uncheck it, update the icon, expand text
-    button.attr('aria-checked','false');
-    button.html("View More ▼");
-    container.find('.expandable').addClass('collapsed');
-  } else {
-    //If it is not checked, check it, update the icon, collapse text
-    button.attr('aria-checked','true');
-    button.html("View Less ▲");
-    container.find('.expandable').removeClass('collapsed');
-  }
-}
-
 
 window.onload = function() {
 };
