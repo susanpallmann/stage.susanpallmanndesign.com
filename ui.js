@@ -43,8 +43,8 @@ $(document).ready(function() {
   });
   
   $(".mark").click(function() {
-    if (window.location.pathname === "/") {
-      scrollToTop();
+    if (location.pathname == "/") {
+      scrollTo("body");
     } else {
       window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
     }
