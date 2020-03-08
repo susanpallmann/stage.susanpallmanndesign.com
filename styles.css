@@ -544,6 +544,9 @@ nav#horizontal li:after {
   padding-top: 100px;
   box-sizing: border-box;
 }
+#hero.gradient {
+  height: 500px;
+}
 #hero .headline-container-container {
   position: relative;
   height:100%;
@@ -1088,6 +1091,9 @@ main .centered {
   #hero {
     height: 400px;
   }
+  #hero.gradient {
+  height: 500px;
+}
   #hero .container {
   }
   .footer-list {
