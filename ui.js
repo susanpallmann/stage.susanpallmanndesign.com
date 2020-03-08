@@ -228,7 +228,6 @@ function heroParallax() {
     }
   }
 }
-
 function parallax() {
   $('.imgParallax').each( function(index) {
     var image = $(this);
@@ -236,7 +235,7 @@ function parallax() {
     var imageTop = imageOffset.top;
     var imageHeight = image.height();
     var imageBottom = imageTop + imageHeight;
-    var parallaxModifier = 0;
+    var parallaxModifier = 20;
     var scrollPosition = getScrollPosition();
     var bottomScrollPosition = scrollPosition + globalViewportHeight;
     var bottomOffset = bottomScrollPosition - imageBottom;
@@ -249,7 +248,7 @@ function parallax() {
       if ( imageBottom > scrollPosition) {
         if ( imageBottom < bottomScrollPosition) {
           var percentScrolled = 1 - (((imageBottom + bottomOffset) - scrollPosition)/globalViewportHeight);
-          image.css('background-position-y', (-25+parallaxModifier*percentScrolled) + 'px');
+          image.css('background-position-y', (-10+parallaxModifier*percentScrolled) + 'px');
         }
       }
     });
