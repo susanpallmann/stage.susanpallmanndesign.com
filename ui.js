@@ -118,7 +118,7 @@ $(document).ready(function() {
   }  
   //Expands or collapses panels with this switch in them
   //When the user clicks on an expand/collapse toggle
-  $('.read-more').click(function () {
+  $('.read-more').click(function toggleView () {
     var button = $(this);
     var container = $(this).parents('.container');
     
@@ -138,6 +138,11 @@ $(document).ready(function() {
       container.find('.expandable').removeClass('collapsed');
     }
   });
+  $('.read-more').keypress(function(event) { 
+    if (event.keyCode === 13) { 
+      $(this).click(); 
+    }
+  }
   //Gallery widget functionality
   $('.gallery-right').click(function() {
     var button = $(this);
