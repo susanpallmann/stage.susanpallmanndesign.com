@@ -3,6 +3,9 @@
   background-color: #FF5C5C;
   background-image: linear-gradient(180deg, #FF5C5C, #DCA1C4);
 }
+.gradient#hero p {
+  color: #ffffff;
+}
 .gradient#hero #dramatic-headline {
   color: #FF5C5C;
   opacity: 0.1;
