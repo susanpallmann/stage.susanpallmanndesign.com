@@ -46,7 +46,7 @@ $(document).ready(function() {
    //if (location.pathname == "/" || location.pathname == "/index.html") {
     if (location.pathname == "/stage.susanpallmanndesign.com/" || location.pathname == "/stage.susanpallmanndesign.com/index.html") {
       $("html,body").animate({
-        scrollTop: body.offset().top - $("header").height()}, "slow");
+        scrollTop: $("body").offset().top - $("header").height()}, "slow");
     } else {
       window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
     }
