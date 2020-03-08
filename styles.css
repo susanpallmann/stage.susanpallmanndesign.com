@@ -1025,7 +1025,7 @@ main .portfolio.column {
   background-position: center;
 }
 .column.hybrid-row .column.project .column.imgParallax {
-  background-position-y: -25px;
+  background-position-y: -10px;
 }
 .overlay {
   height: 100%;
