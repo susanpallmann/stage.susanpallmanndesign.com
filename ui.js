@@ -1,9 +1,5 @@
 $(document).ready(function() {
-  // Calling functions on load & setting some global variables
-  sortPortfolio();
-  heroParallax();
-  parallax();
-
+  /* Calling functions on load & setting some global variables */
   /* Adjust these global variables */
   // Speed of hamburger animation (milliseconds). Should match CSS animation speed.
   hamburgerAnimSpeed = 400;
@@ -20,6 +16,10 @@ $(document).ready(function() {
   scrollValue = -100;
   // Retrieves screen width, just like it says (there's no horizontal scrolling so this is both viewport and window width)
   screenWidth = screen.width;
+  
+  sortPortfolio();
+  heroParallax();
+  parallax();
 
   /* Hamburger Menu Animation */
   $("#top_hamburger").click(function() {
