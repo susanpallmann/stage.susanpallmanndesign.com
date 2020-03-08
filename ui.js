@@ -80,19 +80,6 @@ $(document).ready(function() {
         $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
     }
   });
-  /*$("#filter .tag").click(function() {
-    filter = $(this);
-    text = filter.html();
-    newText = text.toLowerCase().replace(' ','-');
-    $("#filter .tag").removeClass('selected');
-    $(this).addClass('selected');
-    if (newText === "view-all") {
-      $('.project .column').parents('.project').addClass('visible').css('display', 'inline-block');
-    } else {
-      $('.project .column').parents('.project').removeClass('visible').css('display', 'none');
-      $('.' + newText).parents('.project').addClass('visible').css('display', 'inline-block');
-    }
-  });*/
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -101,17 +88,21 @@ $(document).ready(function() {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
-function sortPortfolio() {
-  var sort = getParameterByName('sort');
-  if (!sort) {
-    return null;
-  } else {
-    $('.project .column').parents('.project').removeClass('visible').css('display', 'none');
-    $('.' + sort).parents('.project').addClass('visible').css('display', 'inline-block');
   }
-}
+
+  function sortPortfolio() {
+    var sort = getParameterByName('sort');
+    if (!sort) {
+      $('.tag').removeClass('selected');
+      $('.tag-all').addClass('selected');
+      return null;
+    } else {
+      $('.project .column').parents('.project').removeClass('visible').css('display', 'none');
+      $('.' + sort).parents('.project').addClass('visible').css('display', 'inline-block');
+      $('.tag').removeClass('selected');
+      $('.tag' + sort).addClass('selected');
+    }
+  }
   //Expands or collapses panels with this switch in them
   //When the user clicks on an expand/collapse toggle
   $('.read-more').click(function () {
