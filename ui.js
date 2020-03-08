@@ -236,7 +236,7 @@ function parallax() {
     var imageTop = imageOffset.top;
     var imageHeight = image.height();
     var imageBottom = imageTop + imageHeight;
-    var parallaxModifier = 20;
+    var parallaxModifier = 0;
     var scrollPosition = getScrollPosition();
     var bottomScrollPosition = scrollPosition + globalViewportHeight;
     var bottomOffset = bottomScrollPosition - imageBottom;
