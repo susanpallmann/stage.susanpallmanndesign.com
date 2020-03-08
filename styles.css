@@ -1095,8 +1095,8 @@ main .centered {
     height: 400px;
   }
   #hero.gradient {
-  height: 500px;
-}
+    height: 500px;
+  }
   #hero .container {
   }
   .footer-list {
@@ -1120,6 +1120,9 @@ main .centered {
 /* Mobile Horizontal & Tablets */
 @media only screen and (min-width: 601px) {
   #hero {
+    height: 600px;
+  }
+  #hero.gradient {
     height: 600px;
   }
   #hero .container {
@@ -1166,6 +1169,9 @@ main .centered {
   #hero {
     height: 600px;
   }
+  #hero.gradient {
+    height: 600px;
+  }
   #hero .container {
     margin-top: 100px;
   }
@@ -1209,7 +1215,3 @@ main .centered {
     text-align: left;
   }
 }
-/* To make it load again :P */
-/* I hate this */
-/* Why you no update?? */
-/* Please? :( */
