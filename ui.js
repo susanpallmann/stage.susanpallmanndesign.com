@@ -187,7 +187,7 @@ function readMore() {
     button.html("View Less ▲");
     container.find('.expandable').removeClass('collapsed');
   }
-});
+}
 
 
 window.onload = function() {
