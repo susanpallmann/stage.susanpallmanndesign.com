@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /files/
+Disallow: /resources/
+
+Sitemap: https://susanpallmann.github.io/stage.susanpallmanndesign.com/sitemap.xml
