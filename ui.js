@@ -142,7 +142,7 @@ $(document).ready(function() {
     if (event.keyCode === 13) { 
       $(this).click(); 
     }
-  }
+  });
   //Gallery widget functionality
   $('.gallery-right').click(function() {
     var button = $(this);
