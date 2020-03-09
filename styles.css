@@ -126,6 +126,32 @@
 .futura#hero #dramatic-headline {
   color: #A6CF91;
 }
+#gallery-futura {
+}
+#gallery-futura .gallery-img[data-current-img="1"] {
+  background-image: url("images/futura/gallery-1.png");
+}
+#gallery-futura .gallery-img[data-current-img="2"] {
+  background-image: url("images/futura/gallery-2.png");
+}
+#gallery-futura .gallery-img[data-current-img="3"] {
+  background-image: url("images/futura/gallery-3.png");
+}
+#gallery-futura .gallery-img[data-current-img="4"] {
+  background-image: url("images/futura/gallery-4.png");
+}
+#gallery-futura .gallery-img[data-current-img="5"] {
+  background-image: url("images/futura/gallery-5.png");
+}
+#gallery-futura .gallery-img[data-current-img="6"] {
+  background-image: url("images/futura/gallery-6.png");
+}
+#gallery-futura .gallery-img[data-current-img="7"] {
+  background-image: url("images/futura/gallery-7.png");
+}
+#gallery-futura .gallery-img[data-current-img="8"] {
+  background-image: url("images/futura/gallery-8.png");
+}
 /* Type Lamp */
 .column.hybrid-row .column.project .column.type-lamp {
   background-color: #FFC553;
