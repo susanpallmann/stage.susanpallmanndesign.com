@@ -126,6 +126,17 @@
 .futura#hero #dramatic-headline {
   color: #A6CF91;
 }
+/* Documentation */
+.this-site#hero {
+  background-color: #FF5C5C;
+}
+.this-site#hero #dramatic-headline {
+  color: #FF6C6C;
+}
+.column.hybrid-row .column.project .column.this-site {
+  background-color: #FF5C5C;
+  background-image: url("images/this-site/thumbnail.png");
+}
 /* Type Lamp */
 .column.hybrid-row .column.project .column.type-lamp {
   background-color: #FFC553;
