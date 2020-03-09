@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /files/
 Disallow: /resources/
+Disallow: /404.html
 
 Sitemap: https://susanpallmann.github.io/stage.susanpallmanndesign.com/sitemap.xml
