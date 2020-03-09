@@ -876,6 +876,7 @@ img.sketch {
 .border-shadow {
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  box-sizing: border-box;
 }
 img.profile.serious {
   background-color: #68B2B2;
