@@ -120,6 +120,12 @@
   background-color: #ABD397;
   background-image: url("images/futura/thumbnail.png");
 }
+.futura#hero {
+  background-color: #ABD397;
+}
+.futura#hero #dramatic-headline {
+  color: #A6CF91;
+}
 /* Type Lamp */
 .column.hybrid-row .column.project .column.type-lamp {
   background-color: #FFC553;
