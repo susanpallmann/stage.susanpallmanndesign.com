@@ -853,6 +853,7 @@ input[type=submit]:hover {
 /* Images */
 img {
   width: 100%;
+  color: #e4e4e4;
 }
 .image-padding {
   box-sizing: border-box;
