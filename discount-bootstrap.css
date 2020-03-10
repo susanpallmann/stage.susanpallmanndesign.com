@@ -263,7 +263,7 @@ main .container {
   .column.span12.sm {
     padding: 0 0 0 0;
   }
-  .column.md:nth-child(1) {
+  .column.md:nth-child(1), column.hybrid-row .column.md:nth-child(1) {
     padding: 0 1.5em 0 0;
   }
   .column.md:nth-last-child(1) {
