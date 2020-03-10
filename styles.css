@@ -850,8 +850,6 @@ img {
 }
 .image-padding {
   box-sizing: border-box;
-  padding-left: 1em;
-  padding-right: 1em;
 }
 img.sketch {
   background-color: rgba(255, 92, 92, 0.15);
