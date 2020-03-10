@@ -24,7 +24,6 @@
   flex-wrap: wrap;
 }
 .column.hybrid-row .column {
-  padding: 0 0 0 0 !important;
   margin: 0 0 0 0;
 }
 /* Major Breakpoint || Desktop & Up */
