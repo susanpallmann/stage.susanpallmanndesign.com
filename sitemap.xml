@@ -3,84 +3,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/</loc>
+      <loc>https://susanpallmanndesign.com/</loc>
       <lastmod>2020-03-07</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>1.0</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/about.html</loc>
+      <loc>https://susanpallmanndesign.com/about.html</loc>
       <priority>0.8</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/contact.html</loc>
+      <loc>https://susanpallmanndesign.com/contact.html</loc>
       <priority>0.8</priority>
    </url>
    
     <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/files/susan-pallmann-resume.pdf</loc>
+      <loc>https://susanpallmanndesign.com/files/susan-pallmann-resume.pdf</loc>
       <priority>0.5</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/bigger-picture.html</loc>
+      <loc>https://susanpallmanndesign.com/bigger-picture.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/crescendo.html</loc>
+      <loc>https://susanpallmanndesign.com/crescendo.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/foot-forward.html</loc>
+      <loc>https://susanpallmanndesign.com/foot-forward.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/jason.html</loc>
+      <loc>https://susanpallmanndesign.com/jason.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/evolve-ky.html</loc>
+      <loc>https://susanpallmanndesign.com/evolve-ky.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/onward-together.html</loc>
+      <loc>https://susanpallmanndesign.com/onward-together.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/mrs-eaves.html</loc>
+      <loc>https://susanpallmanndesign.com/mrs-eaves.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/futura.html</loc>
+      <loc>https://susanpallmanndesign.com/futura.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/edison.html</loc>
+      <loc>https://susanpallmanndesign.com/edison.html</loc>
       <priority>0.7</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/edison.html</loc>
-      <priority>0.7</priority>
-   </url>
-   
-   <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/documentation.html</loc>
+      <loc>https://susanpallmanndesign.com/documentation.html</loc>
       <priority>0.3</priority>
    </url>
    
    <url>
-      <loc>https://susanpallmann.github.io/stage.susanpallmanndesign.com/privacy.html</loc>
+      <loc>https://susanpallmanndesign.com/privacy.html</loc>
       <priority>0.1</priority>
    </url>
 
