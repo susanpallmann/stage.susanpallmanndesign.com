@@ -1029,6 +1029,7 @@ main .portfolio.column {
   margin-top: 0;
 }
 .column.hybrid-row .column.project {
+  padding: 0;
 }
 .column.hybrid-row .column.project .column {
   background-color: #eee;
