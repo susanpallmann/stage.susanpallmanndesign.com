@@ -58,6 +58,12 @@
   background-image: url("images/jason/gallery-4.png");
 }
 /* Edison Folio */
+.edison#hero {
+  background-color: #EFD84E;
+}
+.edison#hero #dramatic-headline {
+  color: #E9D144;
+}
 .column.hybrid-row .column.project .column.edison {
   background-color: #EFD84E;
   background-image: url("images/edison/thumbnail.png");
