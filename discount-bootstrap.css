@@ -240,6 +240,15 @@ main .container {
   .column.span12.md {
     padding: 0 1em 0 1em;
   }
+  .column.md:nth-child(1), .column.hybrid-row .column.md:nth-child(1) {
+    padding: 0 1.5em 0 0;
+  }
+  .column.hybrid-row.md .column.md:nth-child(1) {
+    padding: 0 0em 0 0;
+  }
+  .column.hybrid-row.md .column.md:nth-child(n+2) {
+    padding: 0 1.5em 0 0;
+  }
 }
 @media only screen and (min-width: 1056px) {
   .column {
