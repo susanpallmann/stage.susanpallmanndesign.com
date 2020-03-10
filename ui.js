@@ -1,66 +1,96 @@
+/* Global Variables */
+var globalViewportHeight;
+var globalPageHeight;
+var pattern;
+var screenWidth;
+
 $(document).ready(function() {
   /* Calling functions on load & setting some global variables */
   
-  // Global Variables
-  //     Retrieves height of viewport
+  /* Set Global Variables */
+  // Retrieves height of viewport
   globalViewportHeight = getViewportHeight();
-  //     Retrieves full height of page, including what's not visible
+  // Retrieves full height of page, including what's not visible
   globalPageHeight = getPageHeight();
-  //     Tracks the current pattern under the ligature
+  // Tracks the current pattern under the ligature
   pattern = 1;
-  //     Retrieves screen width (there's no horizontal scrolling so this is both viewport and window width)
+  // Retrieves screen width (there's no horizontal scrolling so this is both viewport and window width)
   screenWidth = screen.width;
   
-  // Calling functions
+  /* Calling functions */
   //     Checks URL for sort instructions, acts accordingly
   sortPortfolio();
   //     Start parallax for hero headers
   heroParallax();
-  //     Start parallax on images (on the homepage_
+  //     Start parallax on images (on the homepage)
   parallax();
+});
 
   /* Hamburger Menu Animation */
   $("#top_hamburger").click(function() {
-    //
+    // If the animation is complete
     if ($(this).hasClass("animcomplete")) {
+      // Set to incomplete
       $(this).removeClass("animcomplete");
+      // Mark closed
       $(this).addClass("closed");
+      // Toggle dropdown
       $("#dropdown").slideToggle( "fast" );
       $('#dropdown').find('.expandable').addClass('collapsed');
+      // Set delay (for CSS animation)
       setTimeout(function() {
+        // Remove closed
         $("#top_hamburger").removeClass("closed");
       }, 400);
     } else {
+      // Mark open
       $(this).addClass("open");
+      // Toggle dropdown
       $('#dropdown').find('.expandable').removeClass('collapsed');
       $("#dropdown").slideToggle( "fast" );
+      // Set delay (for CSS animation)
       setTimeout(function() {
+        // Remove open
         $("#top_hamburger").removeClass("open");
+        // Mark complete
         $("#top_hamburger").addClass("animcomplete");
       }, 400);
     }
   });
   
+  /* Ligature Click Function */
   $(".mark").click(function() {
-   //if (location.pathname == "/" || location.pathname == "/index.html") {
-    if (location.pathname == "/stage.susanpallmanndesign.com/" || location.pathname == "/stage.susanpallmanndesign.com/index.html") {
+    //If on the homepage
+    //if (location.pathname == "/" || location.pathname == "/index.html") { // Change to this version on the real site.
+    if (location.pathname == "/stage.susanpallmanndesign.com/" || location.pathname == "/stage.susanpallmanndesign.com/index.html") { // Change to this version on the stage site.
+      // Retrieve current sorting instructions from URL
       var sort = getParameterByName('sort');
+      // If there aren't any sort instructions
       if (!sort) {
+        // Scroll to top of page rather than refreshing
         $("html,body").animate({
           scrollTop: $("body").offset().top - $("header").height()}, "slow");
+      // If there are filters in place
       } else {
+        // Navigate to the homepage without filters
         window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
       }
+    // If not on the homepage
     } else {
+      // Navigate to the homepage
       window.location.assign("https://susanpallmann.github.io/stage.susanpallmanndesign.com/");
     }
   });
+  
+  /* Ligature Hover Function */
   $('header .sp-icon').mouseleave(function() {
+    // Resets the pattern if the maximum is reached
     if (pattern < 3) {
       pattern++;
     } else {
       pattern = 1;
     }
+    // Change the pattern url based on the outcome of the previous variable manipulation
     switch (pattern) {
       case 1:
         $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
@@ -75,12 +105,15 @@ $(document).ready(function() {
         $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
     }
   });
+  /* Ligature Hover Function (Footer Version) */
   $('footer .sp-icon').mouseleave(function() {
+    // Resets the pattern if the maximum is reached (it's 2 here because the third pattern doesn't read well against a dark background)
     if (pattern < 2) {
       pattern++;
     } else {
       pattern = 1;
     }
+    // Change the pattern url based on the outcome of the previous variable manipulation
     switch (pattern) {
       case 1:
         $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
@@ -92,31 +125,48 @@ $(document).ready(function() {
         $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
     }
   });
+  
+  /* Checks URL for search parameters */
   function getParameterByName(name, url) {
+    // Gets current URL
     if (!url) url = window.location.href;
+    // Some regular expression manipulation to get to the parameter we're looking for
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
+    // Failsafes
     if (!results) return null;
     if (!results[2]) return '';
+    // Returns the parameter information
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
 
+  /* Sorts Portfolio */
   function sortPortfolio() {
+    // Retrieves sort parameter
     var sort = getParameterByName('sort');
+    // If there isn't a sort instruction
     if (!sort) {
+      // Assumes to view all
       $('.tag').removeClass('selected');
       $('.tag-all').addClass('selected');
       return null;
+    // If there is a sort instruction
     } else {
+      // Hide all projects
       $('.project .column').parents('.project').removeClass('visible').css('display', 'none');
+      // Show projects with the correct tag (marked as a class)
       $('.' + sort).parents('.project').addClass('visible').css('display', 'inline-block');
+      // Unselect any of the tag options on the homepage
       $('.tag').removeClass('selected');
+      // Select the correct tag option
       $('.tag-' + sort).addClass('selected');
     }
   }  
-  //Expands or collapses panels with this switch in them
-  //When the user clicks on an expand/collapse toggle
+  
+  /* Read More Functionality */
+  // Expands or collapses panels with this switch in them
+  // When the user clicks on an expand/collapse toggle
   $('.read-more').click(function toggleView () {
     var button = $(this);
     var container = $(this).parents('.container');
@@ -137,6 +187,8 @@ $(document).ready(function() {
       container.find('.expandable').removeClass('collapsed');
     }
   });
+  
+  /* Accessibility Concern - Enter/Space input in place of clicking */
   $('.read-more').keydown(function(e) {
     var code = e.which;
     // 13 = Return, 32 = Space
@@ -211,7 +263,6 @@ $(document).ready(function() {
       $(this).click();
     }
   });
-});
 
 window.onload = function() {
 };
