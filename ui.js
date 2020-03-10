@@ -1,29 +1,27 @@
 $(document).ready(function() {
   /* Calling functions on load & setting some global variables */
   
-  // Adjust these global variables
-  //     Speed of hamburger animation (milliseconds). Should match CSS animation speed.
-  hamburgerAnimSpeed = 400;
-
-  // Do not adjust these global variables
+  // Global Variables
   //     Retrieves height of viewport
   globalViewportHeight = getViewportHeight();
   //     Retrieves full height of page, including what's not visible
   globalPageHeight = getPageHeight();
   //     Tracks the current pattern under the ligature
   pattern = 1;
-  // Can't remember what this is
-  //scrollValue = -100;
   //     Retrieves screen width (there's no horizontal scrolling so this is both viewport and window width)
   screenWidth = screen.width;
   
   // Calling functions
+  //     Checks URL for sort instructions, acts accordingly
   sortPortfolio();
+  //     Start parallax for hero headers
   heroParallax();
+  //     Start parallax on images (on the homepage_
   parallax();
 
   /* Hamburger Menu Animation */
   $("#top_hamburger").click(function() {
+    //
     if ($(this).hasClass("animcomplete")) {
       $(this).removeClass("animcomplete");
       $(this).addClass("closed");
@@ -31,7 +29,7 @@ $(document).ready(function() {
       $('#dropdown').find('.expandable').addClass('collapsed');
       setTimeout(function() {
         $("#top_hamburger").removeClass("closed");
-      }, hamburgerAnimSpeed);
+      }, 400);
     } else {
       $(this).addClass("open");
       $('#dropdown').find('.expandable').removeClass('collapsed');
@@ -39,7 +37,7 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#top_hamburger").removeClass("open");
         $("#top_hamburger").addClass("animcomplete");
-      }, hamburgerAnimSpeed);
+      }, 400);
     }
   });
   
