@@ -1,3 +1,9 @@
+/* Global Variables */
+var globalViewportHeight;
+var globalPageHeight;
+var pattern;
+var screenWidth;
+
 $(document).ready(function () {
     /* Calling functions on load & setting some global variables */
 
@@ -123,6 +129,51 @@ $(document).ready(function () {
         }
     });
 
+    /* Ligature Hover Function */
+    $('header .sp-icon').mouseleave(function () {
+        // Resets the pattern if the maximum is reached
+        if (pattern < 3) {
+            pattern++;
+        } else {
+            pattern = 1;
+        }
+        // Change the pattern url based on the outcome of the previous variable manipulation
+        switch (pattern) {
+            case 1:
+                $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
+                break;
+            case 2:
+                $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 2.gif');
+                break;
+            case 3:
+                $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 3.gif');
+                break;
+            default:
+                $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
+        }
+    });
+
+    /* Ligature Hover Function (Footer Version) */
+    $('footer .sp-icon').mouseleave(function () {
+        // Resets the pattern if the maximum is reached (it's 2 here because the third pattern doesn't read well against a dark background)
+        if (pattern < 2) {
+            pattern++;
+        } else {
+            pattern = 1;
+        }
+        // Change the pattern url based on the outcome of the previous variable manipulation
+        switch (pattern) {
+            case 1:
+                $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
+                break;
+            case 2:
+                $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 2.gif');
+                break;
+            default:
+                $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
+        }
+    });
+
     /* Ligature Click Function */
     $(".mark").click(function () {
         //If on the homepage
@@ -178,51 +229,6 @@ $("#top_hamburger").click(function () {
             // Mark complete
             $("#top_hamburger").addClass("animcomplete");
         }, 400);
-    }
-});
-
-/* Ligature Hover Function */
-$('header .sp-icon').mouseleave(function () {
-    // Resets the pattern if the maximum is reached
-    if (pattern < 3) {
-        pattern++;
-    } else {
-        pattern = 1;
-    }
-    // Change the pattern url based on the outcome of the previous variable manipulation
-    switch (pattern) {
-        case 1:
-            $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
-            break;
-        case 2:
-            $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 2.gif');
-            break;
-        case 3:
-            $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 3.gif');
-            break;
-        default:
-            $('header').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
-    }
-});
-
-/* Ligature Hover Function (Footer Version) */
-$('footer .sp-icon').mouseleave(function () {
-    // Resets the pattern if the maximum is reached (it's 2 here because the third pattern doesn't read well against a dark background)
-    if (pattern < 2) {
-        pattern++;
-    } else {
-        pattern = 1;
-    }
-    // Change the pattern url based on the outcome of the previous variable manipulation
-    switch (pattern) {
-        case 1:
-            $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
-            break;
-        case 2:
-            $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 2.gif');
-            break;
-        default:
-            $('footer').find('.pattern-gif').attr('xlink:href', 'images/Pattern 1.gif');
     }
 });
 
