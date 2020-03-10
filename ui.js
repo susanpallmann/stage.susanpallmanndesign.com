@@ -1,9 +1,3 @@
-/* Global Variables */
-var globalViewportHeight;
-var globalPageHeight;
-var pattern;
-var screenWidth;
-
 $(document).ready(function () {
     /* Calling functions on load & setting some global variables */
 
