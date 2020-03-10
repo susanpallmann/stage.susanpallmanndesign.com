@@ -1,22 +1,21 @@
 $(document).ready(function() {
   /* Calling functions on load & setting some global variables */
-  /* Adjust these global variables */
-  // Speed of hamburger animation (milliseconds). Should match CSS animation speed.
+  
+  // Adjust these global variables
+  //     Speed of hamburger animation (milliseconds). Should match CSS animation speed.
   hamburgerAnimSpeed = 400;
-  /* End adjustable variables */
 
-  /* Do not adjust these global variables */
-  // Retrieves height of viewport
+  // Do not adjust these global variables
+  //     Retrieves height of viewport
   globalViewportHeight = getViewportHeight();
-  // Retrieves full height of page, including what's not visible
+  //     Retrieves full height of page, including what's not visible
   globalPageHeight = getPageHeight();
-  // Tracks the current pattern under the ligature
+  //     Tracks the current pattern under the ligature
   pattern = 1;
   // Can't remember what this is
   scrollValue = -100;
   // Retrieves screen width, just like it says (there's no horizontal scrolling so this is both viewport and window width)
   screenWidth = screen.width;
-  
   sortPortfolio();
   heroParallax();
   parallax();
