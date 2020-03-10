@@ -13,9 +13,11 @@ $(document).ready(function() {
   //     Tracks the current pattern under the ligature
   pattern = 1;
   // Can't remember what this is
-  scrollValue = -100;
-  // Retrieves screen width, just like it says (there's no horizontal scrolling so this is both viewport and window width)
+  //scrollValue = -100;
+  //     Retrieves screen width (there's no horizontal scrolling so this is both viewport and window width)
   screenWidth = screen.width;
+  
+  // Calling functions
   sortPortfolio();
   heroParallax();
   parallax();
