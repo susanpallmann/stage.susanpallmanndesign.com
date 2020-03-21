@@ -68,6 +68,8 @@ function swapItems(x, y, xRan, yRan) {
 }
 
 function chooseRandom(x, y, par) {
+  var x = x;
+  var y = y;
   var xRan = Math.floor(Math.random() * rows);
   var yRan = Math.floor(Math.random() * 12);
   var item = roundLookup(xRan, yRan, par);
@@ -228,6 +230,7 @@ function wakeUp() {
         if ( firstClick === true ) {
           console.log("first click is true, firing");
           firstClick = false;
+          console.log(x + " " + y);
           chooseRandom(x, y, "isBomb");
           block.attr('revealed', 'false');
           checkBlock(block);
