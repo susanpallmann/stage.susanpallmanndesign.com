@@ -14,3 +14,10 @@
 .block[bomb="false"] {
   background-color: #d0f0c0;
 }
+.block p {
+  font-size: 0.5em;
+  margin-top: -50%;
+  font-family: 'Raleway', helvetica, arial, sans-serif;
+  color: #483C46;
+  font-weight: 600;
+}
