@@ -226,7 +226,7 @@ function wakeUp() {
           var yNeeded = parseInt(arrLocation[1]);
           var xNeeded = (parseInt(arrLocation[0]))*12-12;
           var locationNum = xNeeded + yNeeded;
-          var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ')';
+          var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ')');
           checkBlock(correspondingBlock);
           console.log("recursive stuff " + correspondingBlock);
         }
