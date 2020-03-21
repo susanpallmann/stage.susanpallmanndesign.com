@@ -189,6 +189,7 @@ function wakeUp() {
   // TODO change back to false
   
   function checkBlock (block) {
+    console.log("this is looking at the following block:  " + block);
     if (block.attr('revealed') === "false") {
       block.attr('revealed', 'true');
     } else {
