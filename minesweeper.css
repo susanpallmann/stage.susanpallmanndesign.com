@@ -11,7 +11,7 @@
   background-color: #eeeeee;
 }
 .block[revealed="true"][clear=true] {
-  background-color: #ffffff;
+  background-color: #fafafa;
 }
 .block[bomb="true"] {
   background-color: #ff6666;
