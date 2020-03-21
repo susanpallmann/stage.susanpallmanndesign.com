@@ -190,7 +190,7 @@ function wakeUp() {
       }
       if ( count > 0 ) {
         //Add number to block
-        $(this).attr('number', count);
+        $(this).append('<p>' + count + '</p>');
       } else {
         //Clear to all numbers
       }
