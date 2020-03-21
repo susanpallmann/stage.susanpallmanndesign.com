@@ -1,5 +1,6 @@
+
 .block {
-  width: 8.33%;
+  width: 100%;
   padding-top: 100%; 
 }
 .block[revealed="true"] {
