@@ -21,31 +21,6 @@ function createBlock(row) {
 
 // On Game Start
 
-// On Round Start
-function roundSetup () {
-  // Reset blocks array
-  blocks = [];
-  // Reset currentID
-  currentID = 0;
-  // Increase the round number
-  roundNumber++;
-  // Determine number of rows based on current round
-  rows = 11 + roundNumber;
-  // Calculate how many blocks are needed for this round
-  var numBlocks = rows*12;
-  // Calculate how many of the blocks should be bombs
-  var numBombs = parseInt(numBlocks*0.16);
-  // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
-  blocks = generateBlocks(numBlocks, numBombs);
-  // Runs shuffle function and returns new array
-  var shuffledBlocks = shuffleBlocks(blocks);
-  // Set original array to new shuffled array
-  blocks = shuffledBlocks;
-  // Assign the blocks to each row
-  assignRows(blocks, rows);
-  console.log(roundArray);
-}
-
 // Durstenfeld shuffle
 function shuffleBlocks(array) {
   for (var i = array.length - 1; i > 0; i--) {
@@ -113,6 +88,31 @@ function assignRows(blocksArr, rowNum) {
     currentRow = [];
   }
   return null;
+}
+  
+// On Round Start
+function roundSetup () {
+  // Reset blocks array
+  blocks = [];
+  // Reset currentID
+  currentID = 0;
+  // Increase the round number
+  roundNumber++;
+  // Determine number of rows based on current round
+  rows = 11 + roundNumber;
+  // Calculate how many blocks are needed for this round
+  var numBlocks = rows*12;
+  // Calculate how many of the blocks should be bombs
+  var numBombs = parseInt(numBlocks*0.16);
+  // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
+  blocks = generateBlocks(numBlocks, numBombs);
+  // Runs shuffle function and returns new array
+  var shuffledBlocks = shuffleBlocks(blocks);
+  // Set original array to new shuffled array
+  blocks = shuffledBlocks;
+  // Assign the blocks to each row
+  assignRows(blocks, rows);
+  console.log(roundArray);
 }
 
 // On Block Click
