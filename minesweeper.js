@@ -163,6 +163,7 @@ $( document ).ready(function() {
     // Calculate how many of the blocks should be bombs
     var numBombs = parseInt(numBlocks*0.16);
     maxMarked = numBombs;
+    $('#remaining').html('Bombs remaining: ' + maxMarked);
     // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
     blocks = generateBlocks(numBlocks, numBombs);
     // Runs shuffle function and returns new array
