@@ -170,40 +170,49 @@ $( document ).ready(function() {
 function wakeUp() {
   // On Block Click
   // TODO change back to false
-  $('[revealed="false"]').click(function() {
-    $(this).attr('revealed', 'true');
-    var x = $(this).attr("location-x");
-    var y = $(this).attr("location-y");
-    var isBomb = roundLookup(x, y, "isBomb");
-    console.log(isBomb);
-    if (isBomb) {
-      //End round
-    } else {
-      var answers = checkSurrounding(x, y, "isBomb");
-      console.log(answers);
-      var count = 0;
-      for (var i = 0; i < answers.length; ++i){
-        if (answers[i] === true) {
-          count++;
-          console.log("the count is " + count);
-        }
-      }
-      if ( count > 0 ) {
-        if ( $(this).attr('number') ) {
-        } else {
-          //Add number to block
-          $(this).append('<p>' + count + '</p>');
-          $(this).attr('number', count);
-        }
+  
+  function checkBlock (block) {
+    var specificBlock = block;
+    specificBlock.attr('revealed', 'true');
+      var x = specificBlock.attr("location-x");
+      var y = specificBlock.attr("location-y");
+      var isBomb = roundLookup(x, y, "isBomb");
+      console.log(isBomb);
+      if (isBomb) {
+        //End round
       } else {
-        //Clear to all numbers
+        var answers = checkSurrounding(x, y, "isBomb");
+        console.log(answers);
+        var count = 0;
+        for (var i = 0; i < answers.length; ++i){
+          if (answers[i] === true) {
+            count++;
+            console.log("the count is " + count);
+          }
+        }
+        if ( count > 0 ) {
+          if ( specificBlock.attr('number') ) {
+          } else {
+            //Add number to block
+            specificBlock.append('<p>' + count + '</p>');
+            specificBlock.attr('number', count);
+          }
+        } else {
+          specificBlock.attr('clear',true);
+          //Clear to all numbers
+          
+          }
+        }
       }
     }
-  });
+  }
+  
+  
   
   $('[revealed="false"]').mousedown(function(event) {
     switch (event.which) {
       case 1:
+        checkBlock($(this));
         break;
       case 2:
         break;
