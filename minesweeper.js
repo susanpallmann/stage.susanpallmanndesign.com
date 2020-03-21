@@ -55,6 +55,15 @@ function checkSurrounding(num1, num2, par) {
   return answers;
 }
 
+function getIndex (arr, k) {
+  for (var i = 0; i < arr.length; i++) {
+    var index = arr[i].indexOf(k);
+    if (index > -1) {
+      return [i, index];
+    }
+  }
+}
+
 $( document ).ready(function() {
 
   // Block Constructor
@@ -212,8 +221,14 @@ function wakeUp() {
         specificBlock.setAttribute('clear',true);
         var moreAnswers = checkSurrounding(x, y, null);
         for (var i = 0; i < moreAnswers.length; ++i){
-          checkBlock(moreAnswers[i]);
-          console.log("recursive stuff " + moreAnswers[i]);
+          var neededObject = moreAnswers[i];
+          var arrLocation = getIndex(roundArray,neededObject);
+          var yNeeded = parseInt(arrLocation[1]);
+          var xNeeded = (parseInt(arrLocation[0]))*12-12;
+          var locationNum = xNeeded + yNeeded;
+          var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ');
+          checkBlock(correspondingBlock);
+          console.log("recursive stuff " + correspondingBlock);
         }
       }
     }
