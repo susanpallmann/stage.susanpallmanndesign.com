@@ -180,7 +180,10 @@ function wakeUp() {
   
   function checkBlock (block) {
     var specificBlock = block;
-    specificBlock.attr('revealed', 'true');
+    if (specificBlock.attr('revealed') === "false") {
+      specificBlock.attr('revealed', 'true');
+    } else {
+    }
     var x = specificBlock.attr("location-x");
     var y = specificBlock.attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
