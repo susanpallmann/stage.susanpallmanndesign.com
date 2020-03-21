@@ -8,6 +8,9 @@
 }
 .block[revealed="true"] {
 }
+.block[clear="true"] {
+  background-color: #eeeeee;
+}
 .block[bomb="true"] {
   background-color: #ff6666;
 }
@@ -15,7 +18,7 @@
   background-color: #d0f0c0;
 }
 .block[flagged=true] {
-  background-color: #eeeeee;
+  background-color: #FCCE4C;
 }
 .block p {
   font-size: 3rem;
