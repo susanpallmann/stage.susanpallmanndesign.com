@@ -15,11 +15,6 @@ function Block(id, bomb) {
   return this;
 }
 
-function createBlock(row) {
-  var newBlock = Block(id, bomb);
-  blocks.push(newBlock);  
-}
-
 // On Game Start
 
 // Durstenfeld shuffle
@@ -121,6 +116,7 @@ function roundSetup () {
   // Assign the blocks to each row
   assignRows(blocks, rows);
   console.log(roundArray);
+  $('#minesweeper').find('p').html(roundArray);
 }
 
 // On Block Click
