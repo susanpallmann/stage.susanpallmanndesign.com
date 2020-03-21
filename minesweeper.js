@@ -179,6 +179,7 @@ function wakeUp() {
       //End round
     } else {
       var answers = checkSurrounding(x, y, "isBomb");
+      console.log(answers);
       var count = 0;
       for (var i = 0; i < answers.length; ++i){
         if (answers[i] === true) {
