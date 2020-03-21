@@ -249,10 +249,12 @@ function wakeUp() {
         }
         if ( count > 0 ) {
           if ( block.attr('number') ) {
+            console.log('block attribute number exists');
           } else {
             //Add number to block
             block.append('<p>' + count + '</p>');
             block.attr('number', count);
+            console.log('block attribute number should be set');
           }
         } else {
           block.attr('clear',true);
