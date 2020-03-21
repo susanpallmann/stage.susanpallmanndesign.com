@@ -233,9 +233,10 @@ function wakeUp() {
           var locationNum = xNeeded + yNeeded;
           console.log(locationNum);
           var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ')');
-          console.log(correspondingBlock);
-          checkBlock(correspondingBlock);
-          console.log("recursive stuff " + correspondingBlock);
+          var correspondingChild = correspondingBlock.find('.block');
+          console.log(correspondingChild);
+          checkBlock(correspondingChild);
+          console.log("recursive stuff " + correspondingChild);
         }
       }
     }
