@@ -195,6 +195,7 @@ function wakeUp() {
     }
     var x = block.attr("location-x");
     var y = block.attr("location-y");
+    console.log("this is looking up if it's a bomb using " + x + " and " y);
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
     if (isBomb) {
