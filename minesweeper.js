@@ -226,6 +226,7 @@ function wakeUp() {
       console.log(isBomb);
       if (isBomb) {
         if ( firstClick === true ) {
+          console.log("first click is true, firing");
           chooseRandom(x, y, "isBomb");
           checkBlock(block);
           firstClick = false;
