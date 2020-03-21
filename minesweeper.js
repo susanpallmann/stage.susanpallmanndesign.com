@@ -92,6 +92,16 @@ function assignRows(blocksArr, rowNum) {
   return null;
 }
   
+function roundLookup(num1, num2, par) {
+  outerNum = num1;
+  innerNum = num2;
+  parameter = par;
+  var outerArray = roundArray[outerNum];
+  var item = outerArray[innerNum];
+  var query = item.parameter;
+  return query;
+}
+  
 // On Round Start
 function roundSetup () {
   // Reset blocks array
@@ -119,9 +129,13 @@ function roundSetup () {
   console.log(blocks);
   // Assign the blocks to each row
   assignRows(blocks, rows);
-  console.log(roundArray);
+  /* temporary TODO remove */
+  for (i=0, i < 12, i++) {
+    for (j=0, j < 12, j++) {
+      roundLookup(i, j, isBomb) {
+    }
+  }
   $('#minesweeper').find('p').html(roundArray);
-  console.log(roundArray[6,6]);
 }
 
 // On Block Click
