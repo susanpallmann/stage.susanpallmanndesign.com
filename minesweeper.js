@@ -7,6 +7,7 @@ var rows = 0;
 var roundArray = [];
 var numberMarked = 0;
 var maxMarked = 0;
+var firstClick;
 
 function roundLookup(num1, num2, par) {
   var x = num1;
@@ -56,6 +57,24 @@ function checkSurrounding(num1, num2, par) {
     }
   }
   return answers;
+}
+
+function swapItems(x, y, xRan, yRan)
+  var a = roundArray[x][y];
+  var b = roundArray[xRan][yRan];
+  roundArray[x][y] = b;
+  roundArray[xRan][yRan] = a;
+}
+
+function chooseRandom(x, y, par) {
+  var xRan = Math.floor(Math.random() * rows);
+  var yRan = Math.floor(Math.random() * 12);
+  var item = roundLookup(xRan, yRan, par);
+  if ( item = true ) {
+    chooseRandom(par);
+  } else {
+    swapItems(x, y, xRan, yRan);
+  }
 }
 
 function getIndex (arr, k) {
@@ -154,6 +173,8 @@ $( document ).ready(function() {
     currentID = 0;
     numberMarked = 0;
     maxMarked = 0;
+    // Prepare firstClick variable
+    firstClick = true;
     // Increase the round number
     roundNumber++;
     // Determine number of rows based on current round
@@ -203,7 +224,12 @@ function wakeUp() {
       var isBomb = roundLookup(x, y, "isBomb");
       console.log(isBomb);
       if (isBomb) {
-        block.attr('bomb',true);
+        if ( firstClick = true ) {
+          chooseRandom(x, y, "isBomb");
+          checkBlock(block);
+        } else {
+          block.attr('bomb',true);
+        }
         //End round
       } else {
         var answers = checkSurrounding(x, y, "isBomb");
