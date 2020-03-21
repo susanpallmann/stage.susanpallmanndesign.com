@@ -40,7 +40,6 @@ function generateBlocks(numBlo, bombs) {
   // Generate bomb block objects using Block constructor
   for (i=0; i < numBombs; i++) {
     newBlock = new Block(currentID, true);
-    console.log(newBlock);
     // Increase currentID each iteration so each block has a unique ID number
     currentID++;
     // Push the new block into the blockArray
@@ -49,7 +48,6 @@ function generateBlocks(numBlo, bombs) {
   // Generate non-bomb block objects using Block constructor
   for (i=numBombs; i < numBlocks; i++) {
     newBlock = new Block(currentID, false);
-    console.log(newBlock);
     // Increase currentID each iteration so each block has a unique ID number
     currentID++;
     // Push the new block into the blockArray
@@ -64,7 +62,6 @@ function assignRows(blocksArr, rowNum) {
   // Importing our numbers from the roundSetup function
   var blocksArray = blocksArr;
   var rowNumber = rowNum;
-  console.log(rowNumber);
   // Temporary storage for the present row array
   var currentRow = [];
   // Storage for the current block object
@@ -74,35 +71,26 @@ function assignRows(blocksArr, rowNum) {
   // Loop through rows
   for (i=0; i < rowNumber; i++) {
     // Loop through 12 blocks per row
-    console.log(i);
     for (j=0; j < 12; j++) {
       // Push current block to current row
-      console.log(blocksArray[currentID]);
       currentRow.push(blocksArray[currentID]);
       // Increase currentID
       currentID++;
     }
     // Push completed row to the overall array
     roundArray.push(currentRow);
-    console.log(currentRow);
     currentRow = [];
   }
-  console.log(roundArray);
   return null;
 }
   
 function roundLookup(num1, num2, par) {
   outerNum = num1;
-  console.log(outerNum);
   innerNum = num2;
-  console.log(innerNum);
   parameter = par;
-  console.log(parameter);
   var outerArray = roundArray[outerNum];
   var item = outerArray[innerNum];
-  console.log(item);
   var query = item[parameter];
-  console.log(query);
   return query;
 }
   
@@ -118,19 +106,14 @@ function roundSetup () {
   rows = 11 + roundNumber;
   // Calculate how many blocks are needed for this round
   var numBlocks = rows*12;
-  console.log(numBlocks);
   // Calculate how many of the blocks should be bombs
   var numBombs = parseInt(numBlocks*0.16);
-  console.log(numBombs);
   // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
   blocks = generateBlocks(numBlocks, numBombs);
-  console.log(blocks);
   // Runs shuffle function and returns new array
   var shuffledBlocks = shuffleBlocks(blocks);
-  console.log(shuffledBlocks);
   // Set original array to new shuffled array
   blocks = shuffledBlocks;
-  console.log(blocks);
   // Assign the blocks to each row
   assignRows(blocks, rows);
   /* temporary TODO remove */
