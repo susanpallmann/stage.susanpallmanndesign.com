@@ -64,6 +64,7 @@ function swapItems(x, y, xRan, yRan) {
   var b = roundArray[xRan][yRan];
   roundArray[x][y] = b;
   roundArray[xRan][yRan] = a;
+  console.log('replacement is done!');
 }
 
 function chooseRandom(x, y, par) {
@@ -227,6 +228,7 @@ function wakeUp() {
         if ( firstClick = true ) {
           chooseRandom(x, y, "isBomb");
           checkBlock(block);
+          firstClick = false;
         } else {
           block.attr('bomb',true);
         }
