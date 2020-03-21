@@ -250,7 +250,6 @@ function wakeUp() {
     switch (event.which) {
       case 1:
           checkBlock($(this));
-        }
         break;
       case 2:
         break;
