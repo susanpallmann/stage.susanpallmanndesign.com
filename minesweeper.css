@@ -14,6 +14,9 @@
 .block[bomb="false"] {
   background-color: #d0f0c0;
 }
+.block[flagged=true] {
+  background-color: #eeeeee;
+}
 .block p {
   font-size: 3rem;
   margin-top: -55%;
