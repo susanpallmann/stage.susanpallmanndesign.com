@@ -65,6 +65,7 @@ function assignRows(blocksArr, rowNum) {
   // Importing our numbers from the roundSetup function
   var blocksArray = blocksArr;
   var rowNumber = rowNum;
+  console.log(rowNumber);
   // Temporary storage for the present row array
   var currentRow = [];
   // Storage for the current block object
@@ -74,6 +75,7 @@ function assignRows(blocksArr, rowNum) {
   // Loop through rows
   for (i=0; i < rowNumber; i++) {
     // Loop through 12 blocks per row
+    console.log(i);
     for (i=0; i < 12; i++) {
       // Increase currentID
       currentID++;
