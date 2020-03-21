@@ -200,4 +200,19 @@ function wakeUp() {
       }
     }
   });
+  
+  $('[revealed="false"]').mousedown(function(event) {
+    switch (event.which) {
+      case 1:
+        break;
+      case 2:
+        break;
+      case 3:
+        $(this).attr('flagged',true);
+        break;
+      default:
+        break;
+    }
+  });
+  
 }
