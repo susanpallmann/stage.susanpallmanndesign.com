@@ -28,7 +28,7 @@ function checkSurrounding(num1, num2, par) {
     [x, y++],
     [x++, y--],
     [x++, y],
-    [x++, y++],
+    [x++, y++]
   ];
   var answers = [];
   for (i=0; i<8; i++) {
@@ -176,7 +176,7 @@ function wakeUp() {
       var answers = checkSurrounding(x, y, "isBomb");
       var count = 0;
       for (var i = 0; i < answers.length; ++i){
-        if (answers[i] == true)
+        if (answers[i] === true)
           count++;
         }
       }
