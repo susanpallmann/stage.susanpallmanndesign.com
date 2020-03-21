@@ -6,6 +6,7 @@ var blocks = [];
 var rows = 0;
 var roundArray = [];
 var numberMarked = 0;
+var maxMarked = 0;
 
 function roundLookup(num1, num2, par) {
   var x = num1;
@@ -152,6 +153,7 @@ $( document ).ready(function() {
     // Reset currentID and numberMarked
     currentID = 0;
     numberMarked = 0;
+    maxMarked = 0;
     // Increase the round number
     roundNumber++;
     // Determine number of rows based on current round
@@ -160,6 +162,7 @@ $( document ).ready(function() {
     var numBlocks = rows*12;
     // Calculate how many of the blocks should be bombs
     var numBombs = parseInt(numBlocks*0.16);
+    maxMarked = numBombs;
     // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
     blocks = generateBlocks(numBlocks, numBombs);
     // Runs shuffle function and returns new array
@@ -246,15 +249,26 @@ function wakeUp() {
   $('[revealed="false"]').mousedown(function(event) {
     switch (event.which) {
       case 1:
-        checkBlock($(this));
+          checkBlock($(this));
+        }
         break;
       case 2:
         break;
       case 3:
         if ( $(this).attr('flagged') === 'true' ) {
           $(this).attr('flagged',false);
+          numberMarked--;
+          var score = maxMarked - numberMarked;
+          $('#remaining').html(score);
         } else {
-          $(this).attr('flagged',true);
+          if ( numberMarked < maxMarked ) {
+            $(this).attr('flagged',true);
+            numberMarked++;
+            var score = maxMarked - numberMarked;
+            $('#remaining').html(score);
+          } else {
+            // Run check if complete function
+          }
         }
         break;
       default:
