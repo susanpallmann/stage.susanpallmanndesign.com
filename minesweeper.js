@@ -265,7 +265,7 @@ function wakeUp() {
             $(this).attr('flagged',true);
             numberMarked++;
             var score = maxMarked - numberMarked;
-            $('#remaining').html(score);
+            $('#remaining').html('Bombs remaining: ' + score);
           } else {
             // Run check if complete function
           }
