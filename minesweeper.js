@@ -187,8 +187,7 @@ function wakeUp() {
   // On Block Click
   // TODO change back to false
   
-    function checkBlock (block) {
-    block.attr('revealed', 'true');
+  function checkBlock (block) {
     if (block.attr('revealed') === "false") {
       block.attr('revealed', 'true');
     } else {
