@@ -207,9 +207,9 @@ function wakeUp() {
       } else {
         specificBlock.attr('clear',true);
         var moreAnswers = checkSurrounding(x, y, null);
-        for (var i = 0; i < answers.length; ++i){
-          checkBlock(answers[i]);
-          console.log("recursive stuff " + answers[i]);
+        for (var i = 0; i < moreAnswers.length; ++i){
+          checkBlock(moreAnswers[i]);
+          console.log("recursive stuff " + moreAnswers[i]);
         }
       }
     }
