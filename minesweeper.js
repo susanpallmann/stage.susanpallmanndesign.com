@@ -6,6 +6,18 @@ var blocks = [];
 var rows = 0;
 var roundArray = [];
 
+function roundLookup(num1, num2, par) {
+  outerNum = num1;
+  console.log(outerNum);
+  innerNum = num2;
+  parameter = par;
+  console.log(roundArray);
+  var outerArray = roundArray[outerNum];
+  var item = outerArray[innerNum];
+  var query = item[parameter];
+  return query;
+}
+
 $( document ).ready(function() {
 
 // Block Constructor
@@ -136,14 +148,4 @@ function wakeUp() {
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
   });
-}
-
-function roundLookup(num1, num2, par) {
-  outerNum = num1;
-  innerNum = num2;
-  parameter = par;
-  var outerArray = roundArray[outerNum];
-  var item = outerArray[innerNum];
-  var query = item[parameter];
-  return query;
 }
