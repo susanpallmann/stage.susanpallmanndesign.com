@@ -30,10 +30,13 @@ function checkSurrounding(num1, num2, par) {
     [x++, y],
     [x++, y++]
   ];
+  console.log(options);
   var answers = [];
   for (i=0; i<8; i++) {
     var xNew = options[i][0];
+    console.log(xNew);
     var yNew = options[i][1];
+    console.log(yNew);
     var answerNew = roundLookup(xNew, yNew, parameter);
     answers.push(answerNew);
   }
