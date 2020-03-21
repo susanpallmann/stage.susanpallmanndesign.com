@@ -83,8 +83,10 @@ function assignRows(blocksArr, rowNum) {
     }
     // Push completed row to the overall array
     roundArray.push(currentRow);
+    console.log(currentRow);
     currentRow = [];
   }
+  console.log(roundArray);
   return null;
 }
   
