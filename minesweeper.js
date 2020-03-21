@@ -102,14 +102,19 @@ function roundSetup () {
   rows = 11 + roundNumber;
   // Calculate how many blocks are needed for this round
   var numBlocks = rows*12;
+  console.log(numBlocks);
   // Calculate how many of the blocks should be bombs
   var numBombs = parseInt(numBlocks*0.16);
+  console.log(numBombs);
   // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
   blocks = generateBlocks(numBlocks, numBombs);
+  console.log(blocks);
   // Runs shuffle function and returns new array
   var shuffledBlocks = shuffleBlocks(blocks);
+  console.log(shuffledBlocks);
   // Set original array to new shuffled array
   blocks = shuffledBlocks;
+  console.log(blocks);
   // Assign the blocks to each row
   assignRows(blocks, rows);
   console.log(roundArray);
