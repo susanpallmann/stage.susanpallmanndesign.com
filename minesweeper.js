@@ -39,8 +39,10 @@ function checkSurrounding(num1, num2, par) {
     console.log(xNew);
     var yNew = options[i][1];
     console.log(yNew);
-    var answerNew = roundLookup(xNew, yNew, parameter);
-    answers.push(answerNew);
+    if (xNew >= 0 && (rows-1) < 10 && yNew >= 0 && yNew < 10 ) {
+      var answerNew = roundLookup(xNew, yNew, parameter);
+      answers.push(answerNew);
+    }
   }
   return answers;
 }
