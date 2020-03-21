@@ -189,8 +189,10 @@ function wakeUp() {
         }
       }
       if ( count > 0 ) {
-        //Add number to block
-        $(this).append('<p>' + count + '</p>');
+        if ( $(this).attr('revealed', 'true') ) {
+          //Add number to block
+          $(this).append('<p>' + count + '</p>');
+        }
       } else {
         //Clear to all numbers
       }
