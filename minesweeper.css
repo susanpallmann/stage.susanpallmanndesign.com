@@ -10,8 +10,8 @@
 .block[revealed="true"] {
   background-color: #eeeeee;
 }
-.block[clear=true] {
-  background-color: #eeeeee;
+.block[revealed="true"][clear=true] {
+  background-color: #ffffff;
 }
 .block[bomb="true"] {
   background-color: #ff6666;
