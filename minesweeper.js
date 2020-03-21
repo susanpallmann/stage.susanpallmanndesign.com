@@ -185,11 +185,12 @@ function wakeUp() {
       for (var i = 0; i < answers.length; ++i){
         if (answers[i] === true) {
           count++;
-          console.log("the count is" + count);
+          console.log("the count is " + count);
         }
       }
       if ( count > 0 ) {
         //Add number to block
+        $(this).attr('number', count);
       } else {
         //Clear to all numbers
       }
