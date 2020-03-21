@@ -229,6 +229,7 @@ function wakeUp() {
           console.log("first click is true, firing");
           firstClick = false;
           chooseRandom(x, y, "isBomb");
+          block.attr('revealed', 'false');
           checkBlock(block);
         } else {
           block.attr('bomb',true);
