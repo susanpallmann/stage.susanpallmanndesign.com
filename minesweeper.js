@@ -180,12 +180,12 @@ function wakeUp() {
   
   function checkBlock (block) {
     var specificBlock = block;
-    if (specificBlock.attr('revealed') === "false") {
-      specificBlock.attr('revealed', 'true');
+    if ( $(specificBlock).attr('revealed') === "false") {
+      $(specificBlock).attr('revealed', 'true');
     } else {
     }
-    var x = specificBlock.attr("location-x");
-    var y = specificBlock.attr("location-y");
+    var x = $(specificBlock).attr("location-x");
+    var y = $(specificBlock).attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
     if (isBomb) {
@@ -201,14 +201,14 @@ function wakeUp() {
         }
       }
       if ( count > 0 ) {
-        if ( specificBlock.attr('number') ) {
+        if ( $(specificBlock).attr('number') ) {
         } else {
           //Add number to block
-          specificBlock.append('<p>' + count + '</p>');
-          specificBlock.attr('number', count);
+          $(specificBlock).append('<p>' + count + '</p>');
+          $(specificBlock).attr('number', count);
         }
       } else {
-        specificBlock.attr('clear',true);
+        $(specificBlock).attr('clear',true);
         var moreAnswers = checkSurrounding(x, y, null);
         for (var i = 0; i < moreAnswers.length; ++i){
           checkBlock(moreAnswers[i]);
