@@ -71,7 +71,7 @@ function chooseRandom(x, y, par) {
   var xRan = Math.floor(Math.random() * rows);
   var yRan = Math.floor(Math.random() * 12);
   var item = roundLookup(xRan, yRan, par);
-  if ( item = true ) {
+  if ( item === true ) {
     chooseRandom(par);
   } else {
     swapItems(x, y, xRan, yRan);
