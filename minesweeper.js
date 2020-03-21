@@ -235,6 +235,9 @@ function wakeUp() {
         }
         //End round
       } else {
+        if ( firstClick === true ) {
+          firstClick = false;
+        }
         var answers = checkSurrounding(x, y, "isBomb");
         console.log(answers);
         var count = 0;
