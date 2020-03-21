@@ -174,7 +174,7 @@ function wakeUp() {
       var answers = checkSurrounding(x, y, "isBomb");
       var count = 0;
       for (var i = 0; i < answers.length; ++i){
-        if (answers[i] === true)
+        if (answers[i] === true) {
           count++;
         }
       }
