@@ -39,7 +39,7 @@ function checkSurrounding(num1, num2, par) {
     console.log(xNew);
     var yNew = options[i][1];
     console.log(yNew);
-    if (xNew >= 0 && xNew < (rows-1) && yNew >= 0 && yNew < 12 ) {
+    if (xNew >= 0 && xNew < (rows) && yNew >= 0 && yNew < 12 ) {
       var answerNew = roundLookup(xNew, yNew, parameter);
       console.log(answerNew);
       answers.push(answerNew);
