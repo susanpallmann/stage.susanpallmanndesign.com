@@ -223,11 +223,14 @@ function wakeUp() {
         var moreAnswers = checkSurrounding(x, y, null);
         for (var i = 0; i < moreAnswers.length; ++i){
           var neededObject = moreAnswers[i];
-          console.log();
+          console.log(neededObject);
           var arrLocation = getIndex(roundArray,neededObject);
           var yNeeded = parseInt(arrLocation[1]);
+          console.log(yNeeded);
           var xNeeded = (parseInt(arrLocation[0]))*12-12;
+          console.log(xNeeded);
           var locationNum = xNeeded + yNeeded;
+          console.log(locationNum);
           var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ')');
           console.log(correspondingBlock);
           checkBlock(correspondingBlock);
