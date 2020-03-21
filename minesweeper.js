@@ -75,11 +75,11 @@ function assignRows(blocksArr, rowNum) {
   for (i=0; i < rowNumber; i++) {
     // Loop through 12 blocks per row
     for (i=0; i < 12; i++) {
+      // Increase currentID
+      currentID++;
       // Push current block to current row
       console.log(blocksArray[currentID]);
       currentRow.push(blocksArray[currentID]);
-      // Increase currentID
-      currentID++;
     }
     // Push completed row to the overall array
     roundArray.push(currentRow);
