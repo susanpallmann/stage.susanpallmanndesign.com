@@ -69,7 +69,7 @@ function generateBlocks(blocks, bombs) {
   currentID++;
   // Generate bomb block objects using Block constructor
   for (i=0; i < numBombs; i++) {
-    newBlock = Block(currentID, True);
+    newBlock = Block(currentID, true);
     // Increase currentID each iteration so each block has a unique ID number
     currentID++;
     // Push the new block into the blockArray
