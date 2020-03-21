@@ -18,7 +18,9 @@ function roundLookup(num1, num2, par) {
 
 function checkSurrounding(num1, num2, par) {
   var x = num1;
+  console.log(x);
   var y = num2;
+  console.log(y);
   var parameter = par;
   var options = [
     [x--, y--],
