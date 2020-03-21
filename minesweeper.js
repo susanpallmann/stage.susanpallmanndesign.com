@@ -222,6 +222,7 @@ function wakeUp() {
         var moreAnswers = checkSurrounding(x, y, null);
         for (var i = 0; i < moreAnswers.length; ++i){
           var neededObject = moreAnswers[i];
+          console.log();
           var arrLocation = getIndex(roundArray,neededObject);
           var yNeeded = parseInt(arrLocation[1]);
           var xNeeded = (parseInt(arrLocation[0]))*12-12;
