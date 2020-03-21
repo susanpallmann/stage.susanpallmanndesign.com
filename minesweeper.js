@@ -120,7 +120,7 @@ function roundSetup () {
   for (i=0; i < 12; i++) {
     for (j=0; j < 12; j++) {
       var thisBomb = roundLookup(i, j, "isBomb");
-      $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="true" bomb=' + thisBomb + ' locationY="' + i + '" locationX=' + j + '"></div></div>');
+      $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="true" bomb=' + thisBomb + ' location-y="' + i + '" location-x=' + j + '"></div></div>');
     }
   }
 }
@@ -128,8 +128,8 @@ function roundSetup () {
 // On Block Click
   // TODO change back to false
   $('.block;).find('[revealed="true"]').click(function() {
-    var x = $(this).attr("locationX");
-    var y = $(this).attr("locationY");
+    var x = $(this).attr("location-x");
+    var y = $(this).attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
   });
