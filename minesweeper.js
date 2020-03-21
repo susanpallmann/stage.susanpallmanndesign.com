@@ -41,6 +41,7 @@ function checkSurrounding(num1, num2, par) {
     console.log(yNew);
     if (xNew >= 0 && (rows-1) < 10 && yNew >= 0 && yNew < 10 ) {
       var answerNew = roundLookup(xNew, yNew, parameter);
+      console.log(answerNew);
       answers.push(answerNew);
     }
   }
