@@ -123,6 +123,7 @@ function roundSetup () {
       $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="true" bomb=' + thisBomb + ' location-y="' + i + '" location-x=' + j + '"></div></div>');
     }
   }
+  wakeUp();
 }
 
 
@@ -133,9 +134,9 @@ function roundSetup () {
   $('h1').click(function() {
     roundSetup();
   });
-  
-  
-// On Block Click
+});
+function wakeUp() {
+  // On Block Click
   // TODO change back to false
   $('.block-container').click(function() {
     console.log("this fired");
@@ -145,4 +146,4 @@ function roundSetup () {
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
   });
-});
+}
