@@ -170,7 +170,7 @@ $( document ).ready(function() {
 function wakeUp() {
   // On Block Click
   // TODO change back to false
-  $('.block[revealed="false"]').click(function() {
+  $('[revealed="false"]').click(function() {
     $(this).attr('revealed', 'true');
     var x = $(this).attr("location-x");
     var y = $(this).attr("location-y");
