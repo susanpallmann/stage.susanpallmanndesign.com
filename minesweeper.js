@@ -103,6 +103,7 @@ function assignRows(blocksArr, rowNum) {
     // Loop through 12 blocks per row
     for (i=0; i < 12; i++) {
       // Push current block to current row
+      console.log(blocksArray[currentID]);
       currentRow.push(blocksArray[currentID]);
       // Increase currentID
       currentID++;
