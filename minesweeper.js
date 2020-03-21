@@ -45,7 +45,7 @@ function generateBlocks(numBlo, bombs) {
   currentID++;
   // Generate bomb block objects using Block constructor
   for (i=0; i < numBombs; i++) {
-    newBlock = Block(currentID, true);
+    newBlock = new Block(currentID, true);
     console.log(newBlock);
     // Increase currentID each iteration so each block has a unique ID number
     currentID++;
@@ -54,7 +54,7 @@ function generateBlocks(numBlo, bombs) {
   }
   // Generate non-bomb block objects using Block constructor
   for (i=numBombs; i < numBlocks; i++) {
-    newBlock = Block(currentID, false);
+    newBlock = new Block(currentID, false);
     console.log(newBlock);
     // Increase currentID each iteration so each block has a unique ID number
     currentID++;
