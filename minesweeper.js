@@ -259,7 +259,7 @@ function wakeUp() {
           $(this).attr('flagged',false);
           numberMarked--;
           var score = maxMarked - numberMarked;
-          $('#remaining').html(score);
+          $('#remaining').html('Bombs remaining: ' + score);
         } else {
           if ( numberMarked < maxMarked ) {
             $(this).attr('flagged',true);
