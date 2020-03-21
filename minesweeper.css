@@ -1,0 +1,12 @@
+.block {
+  width: 8.33%;
+  padding-top: 100%; 
+}
+.block[revealed="true"] {
+}
+.block[bomb="true"] {
+  background-color: #ff6666;
+}
+.block[bomb="false"] {
+  background-color: #d0f0c0;
+}
