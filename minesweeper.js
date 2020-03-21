@@ -26,7 +26,6 @@ function roundLookup(num1, num2, par) {
   }
   return query;
 }
-
 function checkSurrounding(num1, num2, par) {
   var x = parseInt(num1);
   console.log(x);
@@ -58,7 +57,6 @@ function checkSurrounding(num1, num2, par) {
   }
   return answers;
 }
-
 function swapItems(x, y, xRan, yRan) {
   var a = roundArray[x][y];
   var b = roundArray[xRan][yRan];
@@ -66,7 +64,6 @@ function swapItems(x, y, xRan, yRan) {
   roundArray[xRan][yRan] = a;
   console.log('replacement is done!');
 }
-
 function chooseRandom(x, y, par) {
   var x = x;
   var y = y;
@@ -79,7 +76,6 @@ function chooseRandom(x, y, par) {
     swapItems(x, y, xRan, yRan);
   }
 }
-
 function getIndex (arr, k) {
   for (var i = 0; i < arr.length; i++) {
     var index = arr[i].indexOf(k);
@@ -88,17 +84,12 @@ function getIndex (arr, k) {
     }
   }
 }
-
 $( document ).ready(function() {
-
   // Block Constructor
   function Block(id, bomb) {
     this.idNum = id;
     this.isBomb = bomb;
   }
-
-  // On Game Start
-
   // Durstenfeld shuffle
   function shuffleBlocks(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -109,7 +100,6 @@ $( document ).ready(function() {
     }
     return array;
   }
-
   function generateBlocks(numBlo, bombs) {
     // Empty array to put our blocks in
     var blockArray = [];
@@ -139,7 +129,6 @@ $( document ).ready(function() {
     // Returning the array of blocks to roundSetup function
     return blockArray;
   }
-
   // Assigns blocks from shuffled array to a row
   function assignRows(blocksArr, rowNum) {
     // Importing our numbers from the roundSetup function
@@ -205,18 +194,11 @@ $( document ).ready(function() {
     assignRows(blocks, rows);
     wakeUp();
   }
-  
-  // On Round End
-
-  // On Game Lose
   $('h1').click(function() {
     roundSetup();
   });
 });
 function wakeUp() {
-  // On Block Click
-  // TODO change back to false
-  
   function checkBlock (block) {
     console.log("this is looking at the following block: " + block);
     if (block.attr('revealed') === "false") {
@@ -281,10 +263,8 @@ function wakeUp() {
           }
         }
       }
-    } else {
     }
   }
-  
   $('[revealed="false"]').mousedown(function(event) {
     switch (event.which) {
       case 1:
@@ -313,5 +293,4 @@ function wakeUp() {
         break;
     }
   });
-  
 }
