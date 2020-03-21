@@ -216,7 +216,7 @@ function wakeUp() {
           block.attr('number', count);
         }
       } else {
-        block.setAttribute('clear',true);
+        block.attr('clear',true);
         var moreAnswers = checkSurrounding(x, y, null);
         for (var i = 0; i < moreAnswers.length; ++i){
           var neededObject = moreAnswers[i];
