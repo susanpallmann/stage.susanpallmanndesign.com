@@ -127,9 +127,10 @@ function roundSetup () {
 
 // On Block Click
   // TODO change back to false
-  $('.block').click(function() {
-    var x = $(this).attr("location-x");
-    var y = $(this).attr("location-y");
+  $('.block-container').click(function() {
+    var block = $(this).find('.block');
+    var x = block.attr("location-x");
+    var y = block.attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
   });
