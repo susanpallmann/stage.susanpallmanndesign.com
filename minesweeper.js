@@ -149,15 +149,15 @@ $( document ).ready(function() {
         $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" bomb=' + thisBomb + ' location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
       }
     }
+    wakeUp();
   }
-
+  
   // On Round End
 
   // On Game Lose
   $('h1').click(function() {
     roundSetup();
   });
-  wakeUp();
 });
 function wakeUp() {
   // On Block Click
