@@ -1,4 +1,7 @@
-
+.block-container {
+  margin: 0 !important;
+  padding: 0.2em !important;
+}
 .block {
   width: 100%;
   padding-top: 100%; 
