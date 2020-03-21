@@ -178,14 +178,15 @@ function wakeUp() {
   // On Block Click
   // TODO change back to false
   
-  function checkBlock (block) {
+    function checkBlock (block) {
     var specificBlock = block;
-    if ( specificBlock.getAttribute('revealed') === "false") {
-      specificBlock.setAttribute('revealed', 'true');
+    specificBlock.attr('revealed', 'true');
+    if (specificBlock.attr('revealed') === "false") {
+      specificBlock.attr('revealed', 'true');
     } else {
     }
-    var x = specificBlock.getAttribute("location-x");
-    var y = specificBlock.getAttribute("location-y");
+    var x = specificBlock.attr("location-x");
+    var y = specificBlock.attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
     if (isBomb) {
@@ -201,11 +202,11 @@ function wakeUp() {
         }
       }
       if ( count > 0 ) {
-        if ( specificBlock.getAttribute('number') ) {
+        if ( specificBlock.attr('number') ) {
         } else {
           //Add number to block
           specificBlock.append('<p>' + count + '</p>');
-          specificBlock.setAttribute('number', count);
+          specificBlock.attr('number', count);
         }
       } else {
         specificBlock.setAttribute('clear',true);
