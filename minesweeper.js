@@ -5,6 +5,7 @@ var currentID = 0;
 var blocks = [];
 var rows = 0;
 var roundArray = [];
+var numberMarked = 0;
 
 function roundLookup(num1, num2, par) {
   var x = num1;
@@ -148,8 +149,9 @@ $( document ).ready(function() {
     // Reset blocks and round arrays
     blocks = [];
     roundArray = [];
-    // Reset currentID
+    // Reset currentID and numberMarked
     currentID = 0;
+    numberMarked = 0;
     // Increase the round number
     roundNumber++;
     // Determine number of rows based on current round
@@ -171,7 +173,7 @@ $( document ).ready(function() {
       for (j=0; j < 12; j++) {
         var thisBomb = roundLookup(i, j, "isBomb");
         var thisID = roundLookup(i, j, "idNum");
-        $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" bomb=' + thisBomb + ' location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
+        $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
       }
     }
     wakeUp();
