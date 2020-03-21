@@ -138,6 +138,7 @@ function roundSetup () {
 // On Block Click
   // TODO change back to false
   $('.block-container').click(function() {
+    console.log("this fired");
     var block = $(this).find('.block');
     var x = block.attr("location-x");
     var y = block.attr("location-y");
