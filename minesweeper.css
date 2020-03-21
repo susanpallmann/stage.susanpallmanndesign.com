@@ -5,6 +5,7 @@
 .block {
   width: 100%;
   padding-top: 100%; 
+  background-color: #f4f4f4;
 }
 .block[revealed="true"] {
 }
