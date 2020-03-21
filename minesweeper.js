@@ -225,7 +225,7 @@ function wakeUp() {
       var isBomb = roundLookup(x, y, "isBomb");
       console.log(isBomb);
       if (isBomb) {
-        if ( firstClick = true ) {
+        if ( firstClick === true ) {
           chooseRandom(x, y, "isBomb");
           checkBlock(block);
           firstClick = false;
