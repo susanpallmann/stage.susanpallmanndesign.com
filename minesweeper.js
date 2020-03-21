@@ -200,12 +200,10 @@ function wakeUp() {
       } else {
         specificBlock.attr('clear',true);
         //Clear to all numbers
-       
+        
       }
     }
   }
-  
-  
   
   $('[revealed="false"]').mousedown(function(event) {
     switch (event.which) {
