@@ -208,7 +208,11 @@ function wakeUp() {
       case 2:
         break;
       case 3:
-        $(this).attr('flagged',true);
+        if ( $(this).attr('flagged',true) ) {
+          $(this).attr('flagged',false)
+        } else {
+          $(this).attr('flagged',true)
+        }
         break;
       default:
         break;
