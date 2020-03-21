@@ -192,52 +192,52 @@ function wakeUp() {
     console.log("this is looking at the following block:  " + block);
     if (block.attr('revealed') === "false") {
       block.attr('revealed', 'true');
-    } else {
-    }
-    var x = block.attr("location-x");
-    var y = block.attr("location-y");
-    console.log("this is looking up if it's a bomb using " + x + " and " + y);
-    var isBomb = roundLookup(x, y, "isBomb");
-    console.log(isBomb);
-    if (isBomb) {
-      //End round
-    } else {
-      var answers = checkSurrounding(x, y, "isBomb");
-      console.log(answers);
-      var count = 0;
-      for (var i = 0; i < answers.length; ++i){
-        if (answers[i] === true) {
-          count++;
-          console.log("the count is " + count);
-        }
-      }
-      if ( count > 0 ) {
-        if ( block.attr('number') ) {
-        } else {
-          //Add number to block
-          block.append('<p>' + count + '</p>');
-          block.attr('number', count);
-        }
+      var x = block.attr("location-x");
+      var y = block.attr("location-y");
+      console.log("this is looking up if it's a bomb using " + x + " and " + y);
+      var isBomb = roundLookup(x, y, "isBomb");
+      console.log(isBomb);
+      if (isBomb) {
+        //End round
       } else {
-        block.attr('clear',true);
-        var moreAnswers = checkSurrounding(x, y, null);
-        for (var i = 0; i < moreAnswers.length; ++i){
-          var neededObject = moreAnswers[i];
-          console.log(neededObject);
-          var arrLocation = getIndex(roundArray,neededObject);
-          console.log(arrLocation[0] + " " + arrLocation[1]);
-          var yNeeded = arrLocation[1]-1;
-          console.log(yNeeded);
-          var xNeeded = arrLocation[0]*12;
-          console.log(xNeeded);
-          var locationNum = xNeeded + yNeeded;
-          console.log(locationNum);
-          var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ') .block');
-          console.log(correspondingBlock);
-          checkBlock(correspondingBlock);
-          console.log("recursive stuff " + correspondingBlock);
+        var answers = checkSurrounding(x, y, "isBomb");
+        console.log(answers);
+        var count = 0;
+        for (var i = 0; i < answers.length; ++i){
+          if (answers[i] === true) {
+            count++;
+            console.log("the count is " + count);
+          }
+        }
+        if ( count > 0 ) {
+          if ( block.attr('number') ) {
+          } else {
+            //Add number to block
+            block.append('<p>' + count + '</p>');
+            block.attr('number', count);
+          }
+        } else {
+          block.attr('clear',true);
+          var moreAnswers = checkSurrounding(x, y, null);
+          for (var i = 0; i < moreAnswers.length; ++i){
+            var neededObject = moreAnswers[i];
+            console.log(neededObject);
+            var arrLocation = getIndex(roundArray,neededObject);
+            console.log(arrLocation[0] + " " + arrLocation[1]);
+            var yNeeded = arrLocation[1]-1;
+            console.log(yNeeded);
+            var xNeeded = arrLocation[0]*12;
+            console.log(xNeeded);
+            var locationNum = xNeeded + yNeeded;
+            console.log(locationNum);
+            var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ') .block');
+            console.log(correspondingBlock);
+            checkBlock(correspondingBlock);
+            console.log("recursive stuff " + correspondingBlock);
+          }
         }
       }
+    } else {
     }
   }
   
