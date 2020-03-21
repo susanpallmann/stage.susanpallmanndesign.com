@@ -204,7 +204,7 @@ function wakeUp() {
       var isBomb = roundLookup(x, y, "isBomb");
       console.log(isBomb);
       if (isBomb) {
-        $(this).attr('bomb',true);
+        block.attr('bomb',true);
         //End round
       } else {
         var answers = checkSurrounding(x, y, "isBomb");
