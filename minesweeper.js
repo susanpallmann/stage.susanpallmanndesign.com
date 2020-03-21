@@ -7,13 +7,37 @@ var rows = 0;
 var roundArray = [];
 
 function roundLookup(num1, num2, par) {
-  outerNum = num1;
-  innerNum = num2;
-  parameter = par;
-  var outerArray = roundArray[outerNum];
-  var item = outerArray[innerNum];
+  var x = num1;
+  var y = num2;
+  var parameter = par;
+  var outerArray = roundArray[x];
+  var item = outerArray[y];
   var query = item[parameter];
   return query;
+}
+
+function checkSurrounding(num1, num2, par) {
+  var x = num1;
+  var y = num2;
+  var parameter = par;
+  var options = [
+    [x--, y--],
+    [x--, y],
+    [x--, y++],
+    [x, y--],
+    [x, y++],
+    [x++, y--],
+    [x++, y],
+    [x++, y++],
+  ];
+  var answers = [];
+  for (i=0; i<8; i++) {
+    var xNew = options[i][0];
+    var yNew = options[i][1];
+    var answerNew = roundLookup(xNew, yNew, parameter);
+    answers.push(answerNew);
+  }
+  return answers
 }
 
 $( document ).ready(function() {
@@ -96,8 +120,9 @@ function assignRows(blocksArr, rowNum) {
   
 // On Round Start
 function roundSetup () {
-  // Reset blocks array
+  // Reset blocks and round arrays
   blocks = [];
+  roundArray = [];
   // Reset currentID
   currentID = 0;
   // Increase the round number
@@ -139,10 +164,27 @@ function roundSetup () {
 function wakeUp() {
   // On Block Click
   // TODO change back to false
-  $('.block[revealed="true"]').click(function() {
+  $('.block[revealed="false"]').click(function() {
+    $(this).attr('revealed', 'true');
     var x = $(this).attr("location-x");
     var y = $(this).attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
+    if (isBomb) {
+      //End round
+    } else {
+      var answers = checkSurrounding(x, y, "isBomb");
+      var count = 0;
+      for (var i = 0; i < answers.length; ++i){
+        if (answers[i] == true)
+          count++;
+        }
+      }
+      if ( count > 0 ) {
+        //Add number to block
+      } else {
+        //Clear to all numbers
+      }
+    }
   });
 }
