@@ -23,14 +23,14 @@ function checkSurrounding(num1, num2, par) {
   console.log(y);
   var parameter = par;
   var options = [
-    [x--, y--],
-    [x--, y],
-    [x--, y++],
-    [x, y--],
+    [--x, --y],
+    [--x, y],
+    [--x, ++y],
+    [x, --y],
     [x, y++],
-    [x++, y--],
-    [x++, y],
-    [x++, y++]
+    [++x, --y],
+    [++x, y],
+    [++x, ++y]
   ];
   console.log(options);
   var answers = [];
