@@ -232,11 +232,10 @@ function wakeUp() {
           console.log(xNeeded);
           var locationNum = xNeeded + yNeeded;
           console.log(locationNum);
-          var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ')');
-          var correspondingChild = correspondingBlock.find('.block');
-          console.log(correspondingChild);
-          checkBlock(correspondingChild);
-          console.log("recursive stuff " + correspondingChild);
+          var correspondingBlock = $('#minesweeper .row div:nth-child(' + locationNum + ') .block');
+          console.log(correspondingBlock);
+          checkBlock(correspondingBlock);
+          console.log("recursive stuff " + correspondingBlock);
         }
       }
     }
