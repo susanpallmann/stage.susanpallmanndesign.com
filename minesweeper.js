@@ -140,13 +140,9 @@ function roundSetup () {
 function wakeUp() {
   // On Block Click
   // TODO change back to false
-  $('.block').click(function() {
-    console.log("this fired");
+  $('.block[revealed="true"]').click(function() {
     var x = $(this).attr("location-x");
-    console.log(x);
     var y = $(this).attr("location-y");
-    console.log(y);
     var isBomb = roundLookup(x, y, "isBomb");
-    console.log(isBomb);
   });
 }
