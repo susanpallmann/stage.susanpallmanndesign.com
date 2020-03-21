@@ -174,34 +174,33 @@ function wakeUp() {
   function checkBlock (block) {
     var specificBlock = block;
     specificBlock.attr('revealed', 'true');
-      var x = specificBlock.attr("location-x");
-      var y = specificBlock.attr("location-y");
-      var isBomb = roundLookup(x, y, "isBomb");
-      console.log(isBomb);
-      if (isBomb) {
-        //End round
-      } else {
-        var answers = checkSurrounding(x, y, "isBomb");
-        console.log(answers);
-        var count = 0;
-        for (var i = 0; i < answers.length; ++i){
-          if (answers[i] === true) {
-            count++;
-            console.log("the count is " + count);
-          }
+    var x = specificBlock.attr("location-x");
+    var y = specificBlock.attr("location-y");
+    var isBomb = roundLookup(x, y, "isBomb");
+    console.log(isBomb);
+    if (isBomb) {
+      //End round
+    } else {
+      var answers = checkSurrounding(x, y, "isBomb");
+      console.log(answers);
+      var count = 0;
+      for (var i = 0; i < answers.length; ++i){
+        if (answers[i] === true) {
+          count++;
+          console.log("the count is " + count);
         }
-        if ( count > 0 ) {
-          if ( specificBlock.attr('number') ) {
-          } else {
-            //Add number to block
-            specificBlock.append('<p>' + count + '</p>');
-            specificBlock.attr('number', count);
-          }
+      }
+      if ( count > 0 ) {
+        if ( specificBlock.attr('number') ) {
         } else {
-          specificBlock.attr('clear',true);
-          //Clear to all numbers
-          
-          }
+          //Add number to block
+          specificBlock.append('<p>' + count + '</p>');
+          specificBlock.attr('number', count);
+        }
+      } else {
+        specificBlock.attr('clear',true);
+        //Clear to all numbers
+        
         }
       }
     }
