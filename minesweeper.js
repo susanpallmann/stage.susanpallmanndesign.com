@@ -32,13 +32,13 @@ function shuffleBlocks(array) {
   return array;
 }
 
-function generateBlocks(blocks, bombs) {
+function generateBlocks(numBlo, bombs) {
   // Empty array to put our blocks in
   var blockArray = [];
   // Variable to store the new blocks we're creating
   var newBlock
   // Importing our numbers from the roundSetup function
-  numBlocks = blocks;
+  numBlocks = numBlo;
   numBombs =  bombs;
   // Set currentID to 1
   currentID++;
