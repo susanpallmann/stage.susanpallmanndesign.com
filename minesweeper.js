@@ -94,11 +94,16 @@ function assignRows(blocksArr, rowNum) {
   
 function roundLookup(num1, num2, par) {
   outerNum = num1;
+  console.log(outerNum);
   innerNum = num2;
+  console.log(innerNum);
   parameter = par;
+  console.log(parameter);
   var outerArray = roundArray[outerNum];
   var item = outerArray[innerNum];
+  console.log(item);
   var query = item.parameter;
+  console.log(query);
   return query;
 }
   
