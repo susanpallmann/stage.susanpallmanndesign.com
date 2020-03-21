@@ -12,7 +12,6 @@ var roundArray = [];
 function Block(id, bomb) {
   this.idNum = id;
   this.isBomb = bomb;
-  //return this;
 }
 
 // On Game Start
@@ -102,7 +101,7 @@ function roundLookup(num1, num2, par) {
   var outerArray = roundArray[outerNum];
   var item = outerArray[innerNum];
   console.log(item);
-  var query = item.parameter;
+  var query = item[parameter];
   console.log(query);
   return query;
 }
