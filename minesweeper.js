@@ -37,7 +37,7 @@ function checkSurrounding(num1, num2, par) {
     var answerNew = roundLookup(xNew, yNew, parameter);
     answers.push(answerNew);
   }
-  return answers
+  return answers;
 }
 
 $( document ).ready(function() {
