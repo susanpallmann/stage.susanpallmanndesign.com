@@ -143,5 +143,6 @@ function wakeUp() {
     var x = $(this).attr("location-x");
     var y = $(this).attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
+    console.log(isBomb);
   });
 }
