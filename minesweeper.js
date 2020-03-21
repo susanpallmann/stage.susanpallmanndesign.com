@@ -10,9 +10,15 @@ function roundLookup(num1, num2, par) {
   var x = num1;
   var y = num2;
   var parameter = par;
-  var outerArray = roundArray[x];
-  var item = outerArray[y];
-  var query = item[parameter];
+  if ( parameter === null ) {
+    var outerArray = roundArray[x];
+    var item = outerArray[y];
+    var query = item;
+  } else {
+    var outerArray = roundArray[x];
+    var item = outerArray[y];
+    var query = item[parameter];
+  }
   return query;
 }
 
@@ -199,8 +205,10 @@ function wakeUp() {
         }
       } else {
         specificBlock.attr('clear',true);
-        //Clear to all numbers
-        
+        var moreAnswers = checkSurrounding(x, y, null);
+        for (var i = 0; i < answers.length; ++i){
+          checkBlock(answers[i]);
+        }
       }
     }
   }
