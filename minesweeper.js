@@ -12,6 +12,7 @@ var roundArray = [];
 function Block(id, bomb) {
   this.idNum = id;
   this.isBomb = bomb;
+  return this;
 }
 
 function createBlock(row) {
