@@ -228,7 +228,7 @@ function wakeUp() {
           console.log(arrLocation[0] + " " + arrLocation[1]);
           var yNeeded = arrLocation[1];
           console.log(yNeeded);
-          var xNeeded = (arrLocation[0]*12)-12;
+          var xNeeded = arrLocation[0]*12;
           console.log(xNeeded);
           var locationNum = xNeeded + yNeeded;
           console.log(locationNum);
