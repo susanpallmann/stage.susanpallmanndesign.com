@@ -134,6 +134,7 @@ function roundSetup () {
     for (j=0; j < 12; j++) {
       var thisBomb = roundLookup(i, j, isBomb);
       $('#minesweeper').find('p').append("<span>" + thisBomb + "</span><br>");
+    }
   }
 }
 
