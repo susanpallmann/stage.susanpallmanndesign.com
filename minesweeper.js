@@ -208,7 +208,7 @@ function wakeUp() {
         var moreAnswers = checkSurrounding(x, y, null);
         for (var i = 0; i < answers.length; ++i){
           checkBlock(answers[i]);
-          console.log(answers[i]);
+          console.log("recursive stuff " + answers[i]);
         }
       }
     }
