@@ -8,10 +8,8 @@ var roundArray = [];
 
 function roundLookup(num1, num2, par) {
   outerNum = num1;
-  console.log(outerNum);
   innerNum = num2;
   parameter = par;
-  console.log(roundArray);
   var outerArray = roundArray[outerNum];
   var item = outerArray[innerNum];
   var query = item[parameter];
