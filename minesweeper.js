@@ -130,8 +130,8 @@ function roundSetup () {
   // Assign the blocks to each row
   assignRows(blocks, rows);
   /* temporary TODO remove */
-  for (i=0, i < 12, i++) {
-    for (j=0, j < 12, j++) {
+  for (i=0; i < 12; i++) {
+    for (j=0; j < 12; j++) {
       var thisBomb = roundLookup(i, j, isBomb);
       $('#minesweeper').find('p').append("<span>" + thisBomb + "</span><br>");
   }
