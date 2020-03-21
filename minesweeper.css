@@ -8,7 +8,7 @@
 }
 .block[revealed="true"] {
 }
-.block[clear=true] {
+.block[clear=true][bomb="false"] {
   background-color: #eeeeee;
 }
 .block[bomb="true"] {
