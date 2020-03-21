@@ -150,7 +150,7 @@ function roundSetup () {
     }
   }
   wakeUp();
-}
+});
 
 
 
@@ -170,7 +170,7 @@ function wakeUp() {
     var y = $(this).attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
-    /*if (isBomb) {
+    if (isBomb) {
       //End round
     } else {
       var answers = checkSurrounding(x, y, "isBomb");
@@ -185,6 +185,6 @@ function wakeUp() {
       } else {
         //Clear to all numbers
       }
-    }*/
+    }
   });
 }
