@@ -1,12 +1,22 @@
 /* A minesweeper game because I like websites with easter eggs. */
-
-$( document ).ready(function() {
 // Global Variables
 var roundNumber = 0;
 var currentID = 0;
 var blocks = [];
 var rows = 0;
 var roundArray = [];
+
+function roundLookup(num1, num2, par) {
+  outerNum = num1;
+  innerNum = num2;
+  parameter = par;
+  var outerArray = roundArray[outerNum];
+  var item = outerArray[innerNum];
+  var query = item[parameter];
+  return query;
+}
+
+$( document ).ready(function() {
 
 // Block Constructor
 function Block(id, bomb) {
@@ -82,16 +92,6 @@ function assignRows(blocksArr, rowNum) {
     currentRow = [];
   }
   return null;
-}
-  
-function roundLookup(num1, num2, par) {
-  outerNum = num1;
-  innerNum = num2;
-  parameter = par;
-  var outerArray = roundArray[outerNum];
-  var item = outerArray[innerNum];
-  var query = item[parameter];
-  return query;
 }
   
 // On Round Start
