@@ -164,9 +164,9 @@ $( document ).ready(function() {
     var numBombs = parseInt(numBlocks*0.16);
     for (i=0; i < rows; i++) {
       for (j=0; j < 12; j++) {
-        var thisBomb = roundLookup(i, j, "isBomb");
-        var thisID = roundLookup(i, j, "idNum");
-        $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
+        //var thisBomb = roundLookup(i, j, "isBomb");
+        //var thisID = roundLookup(i, j, "idNum");
+        $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" location-y="' + j + '" location-x="' + i + '"></div></div>');
       }
     }
     maxMarked = numBombs;
