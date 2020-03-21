@@ -200,8 +200,7 @@ function wakeUp() {
       } else {
         specificBlock.attr('clear',true);
         //Clear to all numbers
-        
-        }
+       
       }
     }
   }
