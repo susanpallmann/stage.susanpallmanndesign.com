@@ -59,7 +59,7 @@ function checkSurrounding(num1, num2, par) {
   return answers;
 }
 
-function swapItems(x, y, xRan, yRan)
+function swapItems(x, y, xRan, yRan) {
   var a = roundArray[x][y];
   var b = roundArray[xRan][yRan];
   roundArray[x][y] = b;
