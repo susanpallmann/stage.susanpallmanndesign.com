@@ -125,6 +125,16 @@ function roundSetup () {
   }
 }
 
+
+
+// On Round End
+
+// On Game Lose
+  $('h1').click(function() {
+    roundSetup();
+  });
+  
+  
 // On Block Click
   // TODO change back to false
   $('.block-container').click(function() {
@@ -133,12 +143,5 @@ function roundSetup () {
     var y = block.attr("location-y");
     var isBomb = roundLookup(x, y, "isBomb");
     console.log(isBomb);
-  });
-
-// On Round End
-
-// On Game Lose
-  $('h1').click(function() {
-    roundSetup();
   });
 });
