@@ -5,13 +5,13 @@
 .block {
   width: 100%;
   padding-top: 100%; 
-  background-color: #f4f4f4;
+  background-color: #e5e5e5;
 }
 .block[revealed="true"] {
   background-color: #eeeeee;
 }
 .block[revealed="true"][clear=true] {
-  background-color: #fafafa;
+  background-color: #f6f6f6;
 }
 .block[bomb="true"] {
   background-color: #ff6666;
