@@ -162,6 +162,13 @@ $( document ).ready(function() {
     var numBlocks = rows*12;
     // Calculate how many of the blocks should be bombs
     var numBombs = parseInt(numBlocks*0.16);
+    for (i=0; i < rows; i++) {
+      for (j=0; j < 12; j++) {
+        var thisBomb = roundLookup(i, j, "isBomb");
+        var thisID = roundLookup(i, j, "idNum");
+        $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
+      }
+    }
     maxMarked = numBombs;
     $('#remaining').html('Bombs remaining: ' + maxMarked);
     // Fill blocks array with created blocks to the prior specifications, not shuffled; returns array
@@ -172,14 +179,6 @@ $( document ).ready(function() {
     blocks = shuffledBlocks;
     // Assign the blocks to each row
     assignRows(blocks, rows);
-    /* temporary TODO remove */
-    for (i=0; i < 12; i++) {
-      for (j=0; j < 12; j++) {
-        var thisBomb = roundLookup(i, j, "isBomb");
-        var thisID = roundLookup(i, j, "idNum");
-        $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="false" location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
-      }
-    }
     wakeUp();
   }
   
