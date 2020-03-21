@@ -121,7 +121,7 @@ function roundSetup () {
     for (j=0; j < 12; j++) {
       var thisBomb = roundLookup(i, j, "isBomb");
       var thisID = roundLookup(i, j, "idNum");
-      $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed="true" bomb=' + thisBomb + ' location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
+      $('#minesweeper').find('.row').append('<div class="column block-container span1 sm"><div class="block" revealed=' + thisBomb + ' bomb=' + thisBomb + ' location-y="' + j + '" location-x="' + i + '" block-id="' + thisID + '"></div></div>');
     }
   }
   wakeUp();
