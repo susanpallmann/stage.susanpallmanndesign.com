@@ -11,6 +11,7 @@ function roundLookup(num1, num2, par) {
   var y = num2;
   var parameter = par;
   if ( parameter === null ) {
+    console.log("this fired!!!");
     var outerArray = roundArray[x];
     var item = outerArray[y];
     var query = item;
