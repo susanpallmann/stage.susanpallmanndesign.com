@@ -121,6 +121,7 @@ function roundSetup () {
   assignRows(blocks, rows);
   console.log(roundArray);
   $('#minesweeper').find('p').html(roundArray);
+  console.log(roundArray[6,6]);
 }
 
 // On Block Click
