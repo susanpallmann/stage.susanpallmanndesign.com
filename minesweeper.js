@@ -158,7 +158,7 @@ $( document ).ready(function() {
   
   // On Round Start
   function roundSetup () {
-    $('#minesweeper').find('.row').remove(".block-container"); 
+    $('#minesweeper .row').remove(".block-container"); 
     // Reset blocks and round arrays
     blocks = [];
     roundArray = [];
@@ -287,6 +287,7 @@ function wakeUp() {
             $('#remaining').html('Bombs remaining: ' + score);
           } else {
             // Run check if complete function
+            
           }
         }
         break;
