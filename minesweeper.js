@@ -158,7 +158,7 @@ $( document ).ready(function() {
   
   // On Round Start
   function roundSetup () {
-    $('#minesweeper .row').remove(".block-container"); 
+    $('#minesweeper .row .block-container').remove(); 
     // Reset blocks and round arrays
     blocks = [];
     roundArray = [];
