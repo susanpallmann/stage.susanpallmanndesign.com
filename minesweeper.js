@@ -84,6 +84,9 @@ function getIndex (arr, k) {
     }
   }
 }
+function clearBoard() {
+  $('#minesweeper .row .block-container').remove(); 
+}
 $( document ).ready(function() {
   // Block Constructor
   function Block(id, bomb) {
@@ -158,7 +161,7 @@ $( document ).ready(function() {
   
   // On Round Start
   function roundSetup () {
-    $('#minesweeper .row .block-container').remove(); 
+    clearBoard();
     // Reset blocks and round arrays
     blocks = [];
     roundArray = [];
